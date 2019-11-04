@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">DreamDaddy</string>
-    <string name="labelFormulario">Formulario</string>
-    <string name="nombreUsuario">Nombre de usuario</string>
+    <string name="label_form">Formulario</string>
+    <string name="username">Nombre de usuario</string>
     <string name="email">Email</string>
-    <string name="fechaNacimiento">Fecha de nacimiento</string>
-    <string name="boton_Formulario">Finalizar Registro</string>
-    <string name="labelSugarDaddyRol">Choose your role</string>
-    <string name="labelSugarBabyRol">Choose your role</string>
+    <string name="password">Contraseña</string>
+    <string name="birthDate">Fecha de nacimiento</string>
+    <string name="button_form">Registrarse</string>
+    <string name="label_sugarDaddyRole">Elige tu rol</string>
+    <string name="label_sugarBabyRole">Elige tu rol</string>
 </resources>

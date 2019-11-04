@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layoutBaseRegistro"
+    android:id="@+id/layoutBaseRegister"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <ScrollView
-        android:id="@+id/scrollRegistro"
+        android:id="@+id/scrollRegister"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutRegistro"
+        android:id="@+id/layoutRegister"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/Fondo"
-        app:layout_constraintBottom_toTopOf="@+id/scrollRegistro"
+        app:layout_constraintBottom_toTopOf="@+id/scrollRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/labelFormulario"
+            android:id="@+id/label_form"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="@string/labelFormulario"
+            android:text="@string/label_form"
             android:textColor="@color/Blanco"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -34,21 +34,21 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/cajaUsuario"
+            android:id="@+id/editTextUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:background="@color/Blanco"
             android:ems="10"
-            android:hint="@string/nombreUsuario"
+            android:hint="@string/username"
             android:inputType="textPersonName"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/labelFormulario" />
+            app:layout_constraintTop_toBottomOf="@+id/label_form" />
 
         <EditText
-            android:id="@+id/cajaEmail"
+            android:id="@+id/editTextEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -59,47 +59,48 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cajaUsuario" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
 
         <EditText
-            android:id="@+id/cajaPassword"
+            android:id="@+id/editTextPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:background="@color/Blanco"
             android:ems="10"
-            android:hint="@string/email"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cajaEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
         <EditText
-            android:id="@+id/cajaFechaNac"
+            android:id="@+id/editTextBirthDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:background="@color/Blanco"
             android:ems="10"
-            android:hint="@string/fechaNacimiento"
+            android:hint="@string/birthDate"
             android:inputType="date"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cajaPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
         <Button
-            android:id="@+id/botonRegistro"
+            android:id="@+id/buttonRegisterForm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:background="@color/boton_fondo"
-            android:padding="10dp"
-            android:text="@string/boton_Formulario"
+            android:background="@color/button_background"
+            android:padding="20dp"
+            android:text="@string/button_form"
+            android:textColor="@color/button_fontColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cajaFechaNac" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextBirthDate" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

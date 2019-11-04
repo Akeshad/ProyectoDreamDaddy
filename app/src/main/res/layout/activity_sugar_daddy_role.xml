@@ -2,18 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layoutBaseSugarDaddyRol"
+    android:id="@+id/layoutBaseSugarDaddyRole"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <ScrollView
-        android:id="@+id/scrollSugarDaddyRol"
+        android:id="@+id/scrollSugarDaddyRole"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutSugarDaddyRol"
+        android:id="@+id/layoutSugarDaddyRole"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/Fondo"
@@ -24,11 +24,11 @@
 
 
         <TextView
-            android:id="@+id/labelSugarDaddyRol"
+            android:id="@+id/labelSugarDaddyRole"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="@string/labelSugarDaddyRol"
+            android:text="@string/label_sugarDaddyRole"
             android:textColor="@color/Blanco"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,93 +36,93 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageSugarDaddyRol1"
+            android:id="@+id/imageSugarDaddyRole1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/labelSugarDaddyRol"
+            app:layout_constraintTop_toBottomOf="@+id/labelSugarDaddyRole"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/imageSugarDaddyRol2"
+            android:id="@+id/imageSugarDaddyRole2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="50dp"
             android:layout_marginRight="50dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/labelSugarDaddyRol"
+            app:layout_constraintTop_toBottomOf="@+id/labelSugarDaddyRole"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/imageSugarDaddyRol3"
+            android:id="@+id/imageSugarDaddyRole3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageSugarDaddyRol1"
+            app:layout_constraintTop_toBottomOf="@+id/imageSugarDaddyRole1"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/imageSugarDaddyRol4"
+            android:id="@+id/imageSugarDaddyRole4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="50dp"
             android:layout_marginRight="50dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageSugarDaddyRol2"
+            app:layout_constraintTop_toBottomOf="@+id/imageSugarDaddyRole2"
             tools:layout_editor_absoluteY="134dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/imageSugarDaddyRol5"
+            android:id="@+id/imageSugarDaddyRole5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageSugarDaddyRol3"
+            app:layout_constraintTop_toBottomOf="@+id/imageSugarDaddyRole3"
             tools:layout_editor_absoluteY="292dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/imageSugarDaddyRol6"
+            android:id="@+id/imageSugarDaddyRole6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="50dp"
             android:layout_marginRight="50dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageSugarDaddyRol4"
+            app:layout_constraintTop_toBottomOf="@+id/imageSugarDaddyRole4"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/imageSugarDaddyRol7"
+            android:id="@+id/imageSugarDaddyRole7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageSugarDaddyRol5"
+            app:layout_constraintTop_toBottomOf="@+id/imageSugarDaddyRole5"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/imageSugarDaddyRol8"
+            android:id="@+id/imageSugarDaddyRole8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="50dp"
             android:layout_marginRight="50dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageSugarDaddyRol6"
+            app:layout_constraintTop_toBottomOf="@+id/imageSugarDaddyRole6"
             tools:srcCompat="@tools:sample/avatars" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

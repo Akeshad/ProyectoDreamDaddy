@@ -7,5 +7,6 @@
     <color name="Texto">#EBC4EB</color>
     <color name="Blanco">#FEFFFD</color>
     <color name="Verde">#92DB9E</color>
-    <color name="boton_fondo">#EBC4EB</color>
+    <color name="button_background">#9973DB</color>
+    <color name="button_fontColor">#FFFFFF</color>
 </resources>
