@@ -9,4 +9,6 @@
     <color name="Verde">#92DB9E</color>
     <color name="button_background">#9973DB</color>
     <color name="button_fontColor">#FFFFFF</color>
+    <color name="spinner_background">#CFD8DC</color>
+
 </resources>

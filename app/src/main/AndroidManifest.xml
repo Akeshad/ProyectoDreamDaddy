@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EleccionRolActivity"></activity>
-        <activity android:name=".PerfilAfortunadoActivity" />
-        <activity android:name=".InicioSesionActivity">
+        <activity android:name=".RoleSelectionActivity"></activity>
+        <activity android:name=".SelectedProfileActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

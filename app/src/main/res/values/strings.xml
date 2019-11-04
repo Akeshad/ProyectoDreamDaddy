@@ -1,11 +1,22 @@
 <resources>
     <string name="app_name">DreamDaddy</string>
-    <string name="label_form">Formulario</string>
+    <string name="label_register">Formulario</string>
     <string name="username">Nombre de usuario</string>
     <string name="email">Email</string>
     <string name="password">Contraseña</string>
     <string name="birthDate">Fecha de nacimiento</string>
-    <string name="button_form">Registrarse</string>
+    <string name="button_register">Registrarse</string>
     <string name="label_sugarDaddyRole">Elige tu rol</string>
     <string name="label_sugarBabyRole">Elige tu rol</string>
+    <string name="label_login">¡Bienvenido!</string>
+    <string name="button_login">INICIAR SESIÓN</string>
+    <string name="label_formDaddy">¡Un último paso!</string>
+    <string name="button_form">¡Listo!</string>
+    <string name="spinner_province">Provincia</string>
+    <string name="spinner_money">¿Cuánto manejas?</string>
+    <string name="spinner_complexion">Complexión</string>
+    <string name="spinner_style">¿Cuál es tu estilo?</string>
+    <string name="spinner_idealBaby">Tu sugar Baby ideal es...</string>
+    <string name="companyName">AnOtterLove.SA</string>
+
 </resources>
