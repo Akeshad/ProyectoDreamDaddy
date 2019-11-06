@@ -14,7 +14,7 @@
         tools:layout_editor_absoluteY="-70dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layoutRegister"
+            android:id="@+id/constrainLayoutMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 

@@ -2,9 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayoutMain"
     android:layout_width="match_parent"
-    android:background="@color/Fondo"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".activities.SelectedProfileActivity">
 
     <ImageView
@@ -20,8 +21,7 @@
         app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars[10]"
-         />
+        tools:srcCompat="@tools:sample/avatars[10]" />
 
     <Button
         android:id="@+id/botonNumero"
@@ -45,8 +45,8 @@
         android:layout_marginLeft="17dp"
         android:layout_marginTop="34dp"
         android:text="@string/labelInformation"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        android:textColor="@color/Blanco"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenPerfil" />
 </androidx.constraintlayout.widget.ConstraintLayout>

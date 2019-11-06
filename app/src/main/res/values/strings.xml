@@ -20,4 +20,7 @@
     <string name="companyName">AnOtterLove.SA</string>
     <string name="logoContentDescription">El logo de la aplicación DreamDaddy</string>
     <string name="labelInformation">Informacion</string>
+    <string name="text_sugarDaddyRole">Sugar Daddy</string>
+    <string name="text_sugarBabyRole">Sugar Baby</string>
+    <string name="chooseRole">Elige un rol</string>
 </resources>
