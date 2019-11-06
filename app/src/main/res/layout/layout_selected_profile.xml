@@ -20,7 +20,8 @@
         app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars[10]" />
+        tools:srcCompat="@tools:sample/avatars[10]"
+         />
 
     <Button
         android:id="@+id/botonNumero"
@@ -43,9 +44,8 @@
         android:layout_marginStart="17dp"
         android:layout_marginLeft="17dp"
         android:layout_marginTop="34dp"
-        android:text="Informacion"
-        android:textSize="20dp"
-
+        android:text="@string/labelInformation"
+        android:textSize="20sp"
         android:textColor="@color/Blanco"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenPerfil" />

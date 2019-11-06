@@ -18,5 +18,6 @@
     <string name="spinner_style">¿Cuál es tu estilo?</string>
     <string name="spinner_idealBaby">Tu sugar Baby ideal es...</string>
     <string name="companyName">AnOtterLove.SA</string>
+    <string name="labelInformation">Informacion</string>
 
 </resources>

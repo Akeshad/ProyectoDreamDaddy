@@ -24,7 +24,7 @@
             android:textSize="20dp"
             app:layout_constraintBottom_toTopOf="@+id/textRol1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
@@ -34,14 +34,14 @@
             android:layout_width="147dp"
             android:layout_height="37dp"
             android:text="TextView"
-            android:textSize="20dp"
             android:textColor="@color/Blanco"
+            android:textSize="20dp"
             app:layout_constraintBottom_toTopOf="@+id/imageRol1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.488"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.842" />
+            app:layout_constraintVertical_bias="0.913" />
 
         <TextView
             android:id="@+id/textRol2"
