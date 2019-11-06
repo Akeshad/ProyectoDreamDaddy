@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layoutBaseRegister"
+    android:id="@+id/constraintLayoutParentRegister"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/Fondo">
+    android:background="@color/background">
 
     <ScrollView
         android:id="@+id/scrollRegister"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layoutRegister"
+            android:id="@+id/constraintLayoutRegister"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-           >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/label_register"
@@ -25,18 +23,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
                 android:text="@string/label_register"
-                android:textColor="@color/Blanco"
+                android:textColor="@color/white"
                 android:textSize="40sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextUsername"
+                android:id="@+id/editTextUsernameRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:background="@color/Blanco"
+                android:background="@color/white"
                 android:ems="10"
                 android:hint="@string/username"
                 android:inputType="textPersonName"
@@ -57,7 +55,7 @@
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextUsernameRegister" />
 
             <EditText
                 android:id="@+id/editTextPassword"
