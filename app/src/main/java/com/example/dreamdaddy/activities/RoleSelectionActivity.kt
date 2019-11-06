@@ -1,8 +1,9 @@
-package com.example.dreamdaddy
+package com.example.dreamdaddy.activities
 
 import androidx.appcompat.app.AppCompatActivity
 
 import android.os.Bundle
+import com.example.dreamdaddy.R
 
 class RoleSelectionActivity : AppCompatActivity() {
 

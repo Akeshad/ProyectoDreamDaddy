@@ -1,7 +1,8 @@
-package com.example.dreamdaddy
+package com.example.dreamdaddy.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.dreamdaddy.R
 
 class RoleSugarDaddyActivity : AppCompatActivity() {
 
