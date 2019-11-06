@@ -3,10 +3,10 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="backgorund">#262131</color>
+    <color name="background">#262131</color>
     <color name="text">#EBC4EB</color>
     <color name="white">#FEFFFD</color>
-    <color name="green">#92DB9E</color>
+    <color name="light_green">#92DB9E</color>
     <color name="button_background">#9973DB</color>
     <color name="button_fontColor">#FFFFFF</color>
     <color name="spinner_background">#CFD8DC</color>
