@@ -4,7 +4,7 @@
     android:id="@+id/constraintLayoutParentMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Fondo"
+    android:background="@color/background"
     android:orientation="vertical">
 
     <ScrollView
@@ -59,7 +59,7 @@
                 android:layout_marginTop="88dp"
                 android:layout_marginBottom="50dp"
                 android:text="@string/companyName"
-                android:textColor="@color/Texto"
+                android:textColor="@color/text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
