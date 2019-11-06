@@ -2,11 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constrainLayoutParentMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/Fondo">
 
     <ScrollView
         android:id="@+id/scrollRegister"
@@ -16,7 +15,7 @@
         tools:layout_editor_absoluteY="-70dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constrainLayoutMain"
+            android:id="@+id/layoutRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -27,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="152dp"
                 android:text="@string/label_login"
-                android:textColor="@color/white"
+                android:textColor="@color/Blanco"
                 android:textSize="40sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.505"
@@ -39,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="76dp"
-                android:background="@color/white"
+                android:background="@color/Blanco"
                 android:ems="10"
                 android:hint="@string/username"
                 android:inputType="textPersonName"
@@ -54,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="76dp"
-                android:background="@color/white"
+                android:background="@color/Blanco"
                 android:ems="10"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
@@ -65,11 +64,13 @@
 
             <Button
                 android:id="@+id/buttonLoing"
-                style="@style/buttons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="76dp"
+                android:background="@color/button_background"
+                android:padding="20dp"
                 android:text="@string/button_login"
+                android:textColor="@color/button_fontColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextPaswordLog" />
