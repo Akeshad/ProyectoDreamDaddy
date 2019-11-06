@@ -6,7 +6,7 @@
     <color name="background">#262131</color>
     <color name="text">#EBC4EB</color>
     <color name="white">#FEFFFD</color>
-    <color name="light_green">#92DB9E</color>
+    <color name="lightGreen">#92DB9E</color>
     <color name="button_background">#9973DB</color>
     <color name="button_fontColor">#FFFFFF</color>
     <color name="spinner_background">#CFD8DC</color>
