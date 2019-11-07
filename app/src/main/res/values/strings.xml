@@ -1,23 +1,34 @@
 <resources>
     <string name="app_name">DreamDaddy</string>
+    <string name="companyName">AnOtterLove.SA</string>
+    <!-- TEXT VIEWS -->
     <string name="label_register">Formulario</string>
-    <string name="username">Nombre de usuario</string>
-    <string name="email">Email</string>
-    <string name="password">Contraseña</string>
-    <string name="birthDate">Fecha de nacimiento</string>
-    <string name="button_register">Registrarse</string>
-    <string name="label_sugarDaddyRole">Elige tu rol</string>
-    <string name="label_sugarBabyRole">Elige tu rol</string>
     <string name="label_login">¡Bienvenido!</string>
+    <string name="label_sugarForm">¡Un último paso!</string>
+    <string name="labelInformation">Informacion</string>
+    <string name="labelRoleSelection">¡Elige!</string>
+    <string name="labelSugarDaddyRole">Sugar Daddy</string>
+    <string name="labelSugarBabyRole">Sugar Baby</string>
+    <string name="labelSelectedProfile">Ejemplo de\nPerfil Seleccionado\nSaltos de línea</string>
+    <!-- BUTTONS -->
+    <string name="button_register">Registrarse</string>
     <string name="button_login">INICIAR SESIÓN</string>
-    <string name="label_formDaddy">¡Un último paso!</string>
     <string name="button_form">¡Listo!</string>
+    <!-- SPINNERS -->
     <string name="spinner_province">Provincia</string>
     <string name="spinner_money">¿Cuánto manejas?</string>
     <string name="spinner_complexion">Complexión</string>
     <string name="spinner_style">¿Cuál es tu estilo?</string>
     <string name="spinner_idealBaby">Tu sugar Baby ideal es...</string>
-    <string name="companyName">AnOtterLove.SA</string>
+    <!-- IMAGE VIEW CONTENT DESCRIPTIONS -->
     <string name="logoContentDescription">El logo de la aplicación DreamDaddy</string>
-    <string name="labelInformation">Informacion</string>
+    <string name="sugarDaddyContentDescription">Sugar Daddy</string>
+    <string name="sugarBabyContentDescription">Sugar Baby</string>
+                <!-- AQUI FALTA POR ANADIR LOS CONTENT DESCRIPTION DE LAS IMAGENES DE LOS ROLES
+                DE SUGAR DADDIES Y SUGAR BABIES -->
+    <!-- OTHERS -->
+    <string name="username">Nombre de usuario</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="birthDate">Fecha de nacimiento</string>
 </resources>
