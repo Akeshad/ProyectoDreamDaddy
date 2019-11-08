@@ -49,23 +49,24 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelRoleSelection" />
 
-            <ImageView
-                android:id="@+id/imageViewRoleSelectionSugarDaddy"
+            <ImageButton
+                android:id="@+id/imageButtonSugarDaddyRoleSelection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/sugarDaddyContentDescription"
-                android:minWidth="225dp"
-                android:minHeight="225dp"
+                android:backgroundTint="@color/background"
+                android:minWidth="250dp"
+                android:minHeight="250dp"
+                android:onClick="createSugarDaddy"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelRoleSelectionSugarDaddy"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:srcCompat="@drawable/sugardaddy" />
 
             <TextView
                 android:id="@+id/labelRoleSelectionSugarBaby"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="25dp"
                 android:text="@string/labelSugarBabyRole"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -73,21 +74,22 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageViewRoleSelectionSugarDaddy" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRoleSelection" />
 
-            <ImageView
-                android:id="@+id/imageViewRoleSelectionSugarBaby"
+            <ImageButton
+                android:id="@+id/imageButtonSugarBabyRoleSelection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="50dp"
-                android:contentDescription="@string/sugarDaddyContentDescription"
-                android:minWidth="225dp"
-                android:minHeight="225dp"
+                android:backgroundTint="@color/background"
+                android:minWidth="250dp"
+                android:minHeight="250dp"
+                android:onClick="createSugarBaby"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelRoleSelectionSugarBaby"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:srcCompat="@drawable/sugarbaby" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

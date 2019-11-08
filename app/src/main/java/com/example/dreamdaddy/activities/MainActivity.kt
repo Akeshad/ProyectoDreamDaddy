@@ -15,11 +15,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun login(view: View) {
-        var intent: Intent = Intent(this,LoginActivity::class.java)
+        var intent: Intent = Intent(this, LoginActivity::class.java)
         this.startActivity(intent)
     }
     fun register(view: View) {
-        var intent: Intent = Intent(this,RoleSelectionActivity::class.java)
+        var intent: Intent = Intent(this, RoleSelectionActivity::class.java)
         this.startActivity(intent)
     }
 
