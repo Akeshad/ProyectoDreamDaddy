@@ -2,51 +2,71 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutParentSelectedProfile"
     android:layout_width="match_parent"
-    android:background="@color/Fondo"
     android:layout_height="match_parent"
-    tools:context=".activities.SelectedProfileActivity">
+    android:background="@color/background">
 
-    <ImageView
-        android:id="@+id/imagenPerfil"
-        android:layout_width="407dp"
-        android:layout_height="567dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginLeft="11dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="272dp"
-        android:layout_marginRight="272dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.032"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars[10]"
-         />
-
-    <Button
-        android:id="@+id/botonNumero"
-        android:layout_width="72dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="102dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="46dp"
-        android:background="@drawable/llamar"
+    <ScrollView
+        android:id="@+id/scrollSelectedProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenPerfil"
-        app:layout_constraintVertical_bias="0.482" />
-
-    <TextView
-        android:id="@+id/textInformacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="34dp"
-        android:text="@string/labelInformation"
-        android:textSize="20sp"
-        android:textColor="@color/Blanco"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenPerfil" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutVerticalSelectedProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewSelectedProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minWidth="350dp"
+                android:minHeight="500dp"
+                android:scaleType="center"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.6"
+                    android:padding="20dp"
+                    android:text="@string/labelSelectedProfile"
+                    android:textColor="@color/background"
+                    android:textSize="20sp"/>
+
+                <ImageButton
+                    android:id="@+id/imageButtonPhoneSelectedProfile"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:maxHeight="50dp"
+                    android:maxWidth="50dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/llamar" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
