@@ -1,96 +1,98 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/constraintLayoutParentRoleSelection"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Fondo">
+    android:background="@color/background"
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
+        android:id="@+id/scrollRoleSelection"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textElegir"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="171dp"
-            android:layout_marginLeft="171dp"
-            android:layout_marginTop="34dp"
-            android:layout_marginEnd="182dp"
-            android:layout_marginRight="182dp"
-            android:layout_marginBottom="48dp"
-            android:text="CHOOSE"
-            android:textColor="@color/Blanco"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/textRol1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutRoleSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textRol1"
-            android:layout_width="147dp"
-            android:layout_height="37dp"
-            android:text="TextView"
-            android:textColor="@color/Blanco"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageRol1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.488"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.913" />
+            <TextView
+                android:id="@+id/labelRoleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:text="@string/labelRoleSelection"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
-        <TextView
-            android:id="@+id/textRol2"
-            android:layout_width="147dp"
-            android:layout_height="37dp"
-            android:layout_marginStart="172dp"
-            android:layout_marginLeft="172dp"
-            android:layout_marginEnd="181dp"
-            android:layout_marginRight="181dp"
-            android:text="TextView"
-            android:textColor="@color/Blanco"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageRol2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.483"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.952" />
+            <TextView
+                android:id="@+id/labelRoleSelectionSugarDaddy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/labelSugarDaddyRole"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelRoleSelection" />
 
-        <ImageView
-            android:id="@+id/imageRol1"
-            android:layout_width="255dp"
-            android:layout_height="202dp"
+            <ImageButton
+                android:id="@+id/imageButtonSugarDaddyRoleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/background"
+                android:minWidth="250dp"
+                android:minHeight="250dp"
+                android:onClick="createSugarDaddy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelRoleSelectionSugarDaddy"
+                app:srcCompat="@drawable/sugardaddy" />
 
-            android:layout_marginStart="78dp"
-            android:layout_marginLeft="78dp"
-            android:layout_marginEnd="78dp"
-            android:layout_marginRight="78dp"
-            android:layout_marginBottom="52dp"
-            app:layout_constraintBottom_toTopOf="@+id/textRol2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.915"
-            tools:srcCompat="@tools:sample/avatars" />
+            <TextView
+                android:id="@+id/labelRoleSelectionSugarBaby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/labelSugarBabyRole"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRoleSelection" />
 
-        <ImageView
-            android:id="@+id/imageRol2"
-            android:layout_width="255dp"
-            android:layout_height="202dp"
-            android:layout_marginEnd="76dp"
-            android:layout_marginRight="76dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.905"
-            tools:srcCompat="@tools:sample/avatars" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>
+            <ImageButton
+                android:id="@+id/imageButtonSugarBabyRoleSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:backgroundTint="@color/background"
+                android:minWidth="250dp"
+                android:minHeight="250dp"
+                android:onClick="createSugarBaby"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelRoleSelectionSugarBaby"
+                app:srcCompat="@drawable/sugarbaby" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,9 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.RoleSelectionActivity"></activity>
-        <activity android:name=".activities.SelectedProfileActivity"></activity>
         <activity android:name=".activities.LoginActivity"></activity>
+        <activity android:name=".activities.RegisterActivity"></activity>
+        <activity android:name=".activities.RoleSelectionActivity"></activity>
+        <activity android:name=".activities.RoleSugarDaddyActivity"></activity>
+        <activity android:name=".activities.FormSelectionDaddyActivity"></activity>
+        <activity android:name=".activities.RoleSugarBabyActivity"></activity>
+        <activity android:name=".activities.FormSelectionBabyActivity"></activity>
+        <activity android:name=".activities.GridDaddysActivity"></activity>
+        <activity android:name=".activities.SelectedProfileActivity"></activity>
     </application>
 
 </manifest>
