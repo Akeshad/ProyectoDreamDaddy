@@ -14,12 +14,12 @@ class RoleSelectionActivity : AppCompatActivity() {
         setContentView(R.layout.layout_role_selection)
     }
 
-    fun createSugarDaddy(view: View) {
+    fun sugarDaddyRole(view: View) {
         var intent: Intent = Intent(this, RoleSugarDaddyActivity::class.java)
         this.startActivity(intent)
     }
 
-    fun createSugarBaby(view: View) {
+    fun sugarBabyRole(view: View) {
         var intent: Intent = Intent(this, RoleSugarBabyActivity::class.java)
         this.startActivity(intent)
     }
