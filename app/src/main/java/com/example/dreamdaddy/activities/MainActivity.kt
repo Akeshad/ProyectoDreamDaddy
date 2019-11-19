@@ -3,7 +3,6 @@ package com.example.dreamdaddy.activities
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dreamdaddy.R
 
@@ -15,11 +14,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun login(view: View) {
-        var intent: Intent = Intent(this, LoginActivity::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
         this.startActivity(intent)
     }
     fun register(view: View) {
-        var intent: Intent = Intent(this, RoleSelectionActivity::class.java)
+        val intent = Intent(this, RoleSelectionActivity::class.java)
         this.startActivity(intent)
     }
 

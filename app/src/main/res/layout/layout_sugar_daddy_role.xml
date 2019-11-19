@@ -46,6 +46,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/background"
+                android:onClick="createNewDaddyIntellectual"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelSugarDaddyRole"
                 tools:srcCompat="@tools:sample/avatars" />
@@ -58,6 +59,7 @@
                 android:layout_marginEnd="50dp"
                 android:layout_marginRight="50dp"
                 android:backgroundTint="@color/background"
+                android:onClick="createNewDaddyBaddy"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelSugarDaddyRole"
                 tools:srcCompat="@tools:sample/avatars" />
@@ -70,6 +72,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/background"
+                android:onClick="createNewDaddyBear"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole1"
                 tools:srcCompat="@tools:sample/avatars" />
@@ -82,6 +85,7 @@
                 android:layout_marginEnd="50dp"
                 android:layout_marginRight="50dp"
                 android:backgroundTint="@color/background"
+                android:onClick="createNewDaddyModern"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole2"
                 tools:layout_editor_absoluteY="134dp"
@@ -95,6 +99,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/background"
+                android:onClick="createNewDaddySporty"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole3"
                 tools:layout_editor_absoluteY="292dp"
@@ -109,6 +114,7 @@
                 android:layout_marginRight="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:backgroundTint="@color/background"
+                android:onClick="createNewDaddySophisticated"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole4"
                 tools:srcCompat="@tools:sample/avatars" />
 
@@ -121,6 +127,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="50dp"
                 android:backgroundTint="@color/background"
+                android:onClick="createNewDaddyGothic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole5"
@@ -135,6 +142,7 @@
                 android:layout_marginRight="50dp"
                 android:layout_marginBottom="50dp"
                 android:backgroundTint="@color/background"
+                android:onClick="createNewDaddyOther"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole6"
