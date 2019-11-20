@@ -23,7 +23,7 @@
         <activity android:name=".activities.FormSelectionDaddyActivity"></activity>
         <activity android:name=".activities.RoleSugarBabyActivity"></activity>
         <activity android:name=".activities.FormSelectionBabyActivity"></activity>
-        <activity android:name=".activities.GridDaddysActivity"></activity>
+        <activity android:name=".activities.GridActivity"></activity>
         <activity android:name=".activities.SelectedProfileActivity"></activity>
     </application>
 

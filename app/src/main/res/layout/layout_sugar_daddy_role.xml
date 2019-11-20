@@ -47,9 +47,12 @@
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/background"
                 android:onClick="createNewDaddyIntellectual"
+                android:src="@drawable/prueba"
+                android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelSugarDaddyRole"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/prueba"
+                tools:srcCompat="@drawable/prueba" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRole2"
