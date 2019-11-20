@@ -72,6 +72,7 @@
                 style="@style/editTexts"
                 android:layout_marginTop="50dp"
                 android:hint="@string/birthDate"
+                android:onClick="chooseBirthDate"
                 android:inputType="date"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
