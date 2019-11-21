@@ -1,7 +1,6 @@
 package com.example.dreamdaddy.activities
 
 import androidx.appcompat.app.AppCompatActivity
-
 import android.os.Bundle
 import android.view.View
 import com.example.dreamdaddy.R

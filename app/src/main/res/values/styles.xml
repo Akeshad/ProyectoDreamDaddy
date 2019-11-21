@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- BUTTONS -->
     <style name="buttons">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
@@ -17,18 +18,13 @@
         <item name="android:width">150dp</item>
     </style>
 
-    -<style name="editTexts">
-
-    <item name="android:layout_height">wrap_content</item>
-
-    <item name="android:layout_width">wrap_content</item>
-
-    <item name="android:background">@color/white</item>
-
-    <item name="android:ems">10</item>
-
-    <item name="android:padding">10dp</item>
-
-</style>
+    <!-- EDIT TEXTS -->
+    <style name="editTexts">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:ems">10</item>
+        <item name="android:padding">10dp</item>
+    </style>
 
 </resources>

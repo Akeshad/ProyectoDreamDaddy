@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, LoginActivity::class.java)
         this.startActivity(intent)
     }
+
     fun register(view: View) {
         val intent = Intent(this, RoleSelectionActivity::class.java)
         this.startActivity(intent)

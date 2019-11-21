@@ -1,6 +1,8 @@
 <resources>
+
     <string name="app_name">DreamDaddy</string>
     <string name="companyName">AnOtterLove.SA</string>
+
     <!-- TEXT VIEWS -->
     <string name="label_register">Formulario</string>
     <string name="label_login">¡Bienvenido!</string>
@@ -10,28 +12,32 @@
     <string name="labelSugarDaddyRole">Sugar Daddy</string>
     <string name="labelSugarBabyRole">Sugar Baby</string>
     <string name="labelSelectedProfile">Ejemplo de\nPerfil Seleccionado\nSaltos de línea</string>
+
     <!-- BUTTONS -->
     <string name="button_register">Registrarse</string>
     <string name="button_login">INICIAR SESIÓN</string>
     <string name="button_form">¡Listo!</string>
+
     <!-- SPINNERS -->
     <string name="spinner_province">Provincia</string>
     <string name="spinner_money">¿Cuánto manejas?</string>
     <string name="spinner_complexion">Complexión</string>
     <string name="spinner_style">¿Cuál es tu estilo?</string>
     <string name="spinner_idealBaby">Tu sugar Baby ideal es...</string>
+
     <!-- IMAGE VIEW CONTENT DESCRIPTIONS -->
     <string name="logoContentDescription">El logo de la aplicación DreamDaddy</string>
     <string name="sugarDaddyContentDescription">Sugar Daddy</string>
     <string name="sugarBabyContentDescription">Sugar Baby</string>
-    <!-- AQUI FALTA POR ANADIR LOS CONTENT DESCRIPTION DE LAS IMAGENES DE LOS ROLES
-                DE SUGAR DADDIES Y SUGAR BABIES -->
+
+    <!-- AQUI FALTA POR ANADIR LOS CONTENT DESCRIPTION DE LAS IMAGENES DE LOS ROLES DE SUGAR DADDIES Y SUGAR BABIES -->
+    <string name="imagePersonContentDescription">Avatar del perfil seleccionado</string>
+
     <!-- OTHERS -->
     <string name="username">Nombre de usuario</string>
     <string name="email">Email</string>
     <string name="password">Contraseña</string>
     <string name="birthDate">Fecha de nacimiento</string>
+    <string name="telephone">Ver número de la persona</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
