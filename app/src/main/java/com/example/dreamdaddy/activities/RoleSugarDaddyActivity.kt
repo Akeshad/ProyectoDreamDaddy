@@ -18,6 +18,7 @@ class RoleSugarDaddyActivity : AppCompatActivity() {
     fun createNewDaddyIntellectual(view: View) {
         val sugarDaddy = SugarDaddy()
         sugarDaddy.kind = kindDaddy.INTELLECTUAL
+        sugarDaddy.linkImage = R.drawable.prueba
 
         val intent = Intent(this, RegisterActivity::class.java)
         intent.putExtra("sugardaddy", sugarDaddy)

@@ -24,11 +24,14 @@
     <string name="logoContentDescription">El logo de la aplicación DreamDaddy</string>
     <string name="sugarDaddyContentDescription">Sugar Daddy</string>
     <string name="sugarBabyContentDescription">Sugar Baby</string>
-                <!-- AQUI FALTA POR ANADIR LOS CONTENT DESCRIPTION DE LAS IMAGENES DE LOS ROLES
+    <!-- AQUI FALTA POR ANADIR LOS CONTENT DESCRIPTION DE LAS IMAGENES DE LOS ROLES
                 DE SUGAR DADDIES Y SUGAR BABIES -->
     <!-- OTHERS -->
     <string name="username">Nombre de usuario</string>
     <string name="email">Email</string>
     <string name="password">Contraseña</string>
     <string name="birthDate">Fecha de nacimiento</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

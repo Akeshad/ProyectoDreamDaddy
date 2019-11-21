@@ -11,11 +11,13 @@ import com.example.dreamdaddy.classes.SugarBaby
 import com.example.dreamdaddy.classes.SugarDaddy
 import kotlinx.android.synthetic.main.layout_register.*
 import java.sql.Date
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 class RegisterActivity : AppCompatActivity() {
 
-
+    private lateinit var dateStr: String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,12 +31,12 @@ class RegisterActivity : AppCompatActivity() {
 
         editTextBirthDateRegister.setOnClickListener{
             val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, mYear, mMonth, mDayOfMonth ->
-                editTextBirthDateRegister.setText( "" + mDayOfMonth + "/" + mMonth + "/" + mYear)
+                editTextBirthDateRegister.setText("" + mDayOfMonth + "/" + mMonth + "/" + mYear)
+                dateStr = ("" + mDayOfMonth + "/" + mMonth + "/" + mYear).toString()
             }, year, month , day )
 
             dpd.show()
         }
-
     }
 
     fun subscribeNewUser(view: View) {
@@ -43,7 +45,7 @@ class RegisterActivity : AppCompatActivity() {
             sugarDaddy.nickname = findViewById<EditText>(R.id.editTextUsernameRegister).text.toString()
             sugarDaddy.email = findViewById<EditText>(R.id.editTextEmailRegister).text.toString()
             sugarDaddy.password = findViewById<EditText>(R.id.editTextPasswordRegister).text.toString()
-            sugarDaddy.birthDate = Date.valueOf(findViewById<EditText>(R.id.editTextBirthDateRegister).text.toString())
+            sugarDaddy.birthDate = LocalDate.parse(dateStr, DateTimeFormatter.ofPattern("dd/MM/yyyy"))
             val intent = Intent(this, GridActivity::class.java)
             intent.putExtra("sugardaddy", sugarDaddy)
             startActivity(intent)
