@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dreamdaddy">
 
@@ -17,13 +18,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.LoginActivity"></activity>
-        <activity android:name=".activities.RegisterActivity"></activity>
+        <activity android:name=".activities.RegisterActivity"
+            android:windowSoftInputMode="stateHidden"></activity>
         <activity android:name=".activities.RoleSelectionActivity"></activity>
         <activity android:name=".activities.RoleSugarDaddyActivity"></activity>
         <activity android:name=".activities.FormSelectionDaddyActivity"></activity>
         <activity android:name=".activities.RoleSugarBabyActivity"></activity>
         <activity android:name=".activities.FormSelectionBabyActivity"></activity>
-        <activity android:name=".activities.GridActivity"></activity>
+        <activity android:name=".activities.GridActivity" android:theme="@style/DaddyActionBar"
+            ></activity>
         <activity android:name=".activities.SelectedProfileActivity"></activity>
     </application>
 
