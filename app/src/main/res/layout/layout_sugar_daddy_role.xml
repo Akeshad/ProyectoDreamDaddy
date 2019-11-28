@@ -29,27 +29,19 @@
 
             <TextView
                 android:id="@+id/labelSugarDaddyRole"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                style="@style/textHeaders"
                 android:text="@string/labelRoleSelection"
-                android:textColor="@color/white"
-                android:textSize="40sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRole1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="@color/background"
+                style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarDaddy_intellectual"
                 android:onClick="createNewDaddyIntellectual"
                 android:src="@drawable/prueba"
-                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelSugarDaddyRole"
                 tools:src="@drawable/prueba"
@@ -57,99 +49,74 @@
 
             <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRole2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginRight="50dp"
-                android:backgroundTint="@color/background"
+                android:contentDescription="@string/sugarDaddy_baddy"
+                style="@style/imageButtonDaddyKindSelection"
                 android:onClick="createNewDaddyBaddy"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/labelSugarDaddyRole"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <ImageButton
-                android:id="@+id/imageButtonSugarDaddyRole3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="@color/background"
-                android:onClick="createNewDaddyBear"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole1"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ImageButton
+                android:id="@+id/imageButtonSugarDaddyRole3"
+                android:contentDescription="@string/sugarDaddy_bear"
+                style="@style/imageButtonDaddyKindSelection"
+                android:onClick="createNewDaddyBear"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole2"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRole4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginRight="50dp"
-                android:backgroundTint="@color/background"
+                style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarDaddy_modern"
                 android:onClick="createNewDaddyModern"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole2"
-                tools:layout_editor_absoluteY="134dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole3"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRole5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="@color/background"
+                style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarDaddy_sporty"
                 android:onClick="createNewDaddySporty"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole3"
-                tools:layout_editor_absoluteY="292dp"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <ImageButton
-                android:id="@+id/imageButtonSugarDaddyRole6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginRight="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:backgroundTint="@color/background"
-                android:onClick="createNewDaddySophisticated"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole4"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ImageButton
-                android:id="@+id/imageButtonSugarDaddyRole7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="50dp"
-                android:backgroundTint="@color/background"
-                android:onClick="createNewDaddyGothic"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/imageButtonSugarDaddyRole6"
+                style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarDaddy_sophisticated"
+                android:onClick="createNewDaddySophisticated"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole5"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ImageButton
+                android:id="@+id/imageButtonSugarDaddyRole7"
+                style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarDaddy_gothic"
+                android:onClick="createNewDaddyGothic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole6"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRole8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginRight="50dp"
+                style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarDaddy_other"
                 android:layout_marginBottom="50dp"
-                android:backgroundTint="@color/background"
                 android:onClick="createNewDaddyOther"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole7"
                 tools:srcCompat="@tools:sample/avatars" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

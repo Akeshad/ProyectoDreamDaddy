@@ -24,13 +24,9 @@
 
             <TextView
                 android:id="@+id/labelRoleSelection"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                style="@style/textHeaders"
                 android:layout_marginBottom="50dp"
                 android:text="@string/labelRoleSelection"
-                android:textColor="@color/white"
-                android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -38,13 +34,9 @@
 
             <TextView
                 android:id="@+id/labelRoleSelectionSugarDaddy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/textSubHeaders"
                 android:layout_marginTop="50dp"
                 android:text="@string/labelSugarDaddyRole"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
@@ -52,11 +44,7 @@
 
             <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRoleSelection"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/background"
-                android:minWidth="250dp"
-                android:minHeight="250dp"
+                style="@style/imageButtonRoleSelection"
                 android:contentDescription="@string/labelSugarDaddyRole"
                 android:onClick="sugarDaddyRole"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -66,13 +54,9 @@
 
             <TextView
                 android:id="@+id/labelRoleSelectionSugarBaby"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/textSubHeaders"
                 android:layout_marginTop="25dp"
                 android:text="@string/labelSugarBabyRole"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
@@ -80,12 +64,8 @@
 
             <ImageButton
                 android:id="@+id/imageButtonSugarBabyRoleSelection"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/imageButtonRoleSelection"
                 android:layout_marginBottom="50dp"
-                android:backgroundTint="@color/background"
-                android:minWidth="250dp"
-                android:minHeight="250dp"
                 android:contentDescription="@string/labelSugarBabyRole"
                 android:onClick="sugarBabyRole"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -25,7 +25,7 @@
             <ImageView
                 android:id="@+id/logo"
                 android:layout_width="280dp"
-                android:layout_height="222dp"
+                android:layout_height="250dp"
                 android:layout_marginTop="80dp"
                 android:contentDescription="@string/logoContentDescription"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
             <Button
                 android:id="@+id/buttonLogMain"
                 style="@style/buttons"
-                android:layout_marginTop="256dp"
+                android:layout_marginTop="275dp"
                 android:text="@string/button_login"
                 android:onClick="login"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
             <Button
                 android:id="@+id/buttonRegisterMain"
                 style="@style/buttons"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="40dp"
                 android:text="@string/button_register"
                 android:onClick="register"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +59,7 @@
                 android:id="@+id/companyName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="88dp"
+                android:layout_marginTop="130dp"
                 android:layout_marginBottom="50dp"
                 android:text="@string/companyName"
                 android:textColor="@color/text"
