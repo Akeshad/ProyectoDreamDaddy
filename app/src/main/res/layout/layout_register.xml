@@ -23,12 +23,8 @@
 
             <TextView
                 android:id="@+id/labelRegister"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                style="@style/textHeaders"
                 android:text="@string/label_register"
-                android:textColor="@color/white"
-                android:textSize="40sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -36,12 +32,6 @@
             <EditText
                 android:id="@+id/editTextUsernameRegister"
                 style="@style/editTexts"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:background="@color/white"
-                android:ems="10"
-                android:focusable="auto"
                 android:hint="@string/username"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -51,8 +41,6 @@
             <EditText
                 android:id="@+id/editTextEmailRegister"
                 style="@style/editTexts"
-                android:layout_marginTop="50dp"
-                android:focusable="auto"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -62,8 +50,6 @@
             <EditText
                 android:id="@+id/editTextPasswordRegister"
                 style="@style/editTexts"
-                android:layout_marginTop="50dp"
-                android:focusable="auto"
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +59,6 @@
             <EditText
                 android:id="@+id/editTextBirthDateRegister"
                 style="@style/editTexts"
-                android:layout_marginTop="50dp"
                 android:focusable="false"
                 android:hint="@string/birthDate"
                 android:inputType="date"

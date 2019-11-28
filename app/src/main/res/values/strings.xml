@@ -1,5 +1,6 @@
 <resources>
 
+    <!-- GENERAL -->
     <string name="app_name">DreamDaddy</string>
     <string name="companyName">AnOtterLove.SA</string>
 
@@ -30,8 +31,16 @@
     <string name="sugarDaddyContentDescription">Sugar Daddy</string>
     <string name="sugarBabyContentDescription">Sugar Baby</string>
 
-    <!-- AQUI FALTA POR ANADIR LOS CONTENT DESCRIPTION DE LAS IMAGENES DE LOS ROLES DE SUGAR DADDIES Y SUGAR BABIES -->
+    <!-- SUGAR DADDIES AND SUGAR BABIES -->
     <string name="imagePersonContentDescription">Avatar del perfil seleccionado</string>
+    <string name="sugarDaddy_intellectual">Sugar Daddy: Intellectual Role</string>
+    <string name="sugarDaddy_baddy">Sugar Daddy: Baddy Role</string>
+    <string name="sugarDaddy_bear">Sugar Daddy: Bear Role</string>
+    <string name="sugarDaddy_modern">Sugar Daddy: Modern Role</string>
+    <string name="sugarDaddy_sporty">Sugar Daddy: Sporty Role</string>
+    <string name="sugarDaddy_sophisticated">Sugar Daddy: Sophisticated Role</string>
+    <string name="sugarDaddy_gothic">Sugar Daddy: Gothic Role</string>
+    <string name="sugarDaddy_other">Sugar Daddy: Other Role</string>
 
     <!-- OTHERS -->
     <string name="username">Nombre de usuario</string>
