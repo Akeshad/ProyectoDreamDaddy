@@ -1,6 +1,7 @@
 package com.example.dreamdaddy.activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -64,17 +65,14 @@ class GridActivity : AppCompatActivity() {
      */
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
 
-        R.id.action_search -> {
-
-            msgShow("Buscar")
-            true
-
-        }
 
         R.id.action_profile -> {
 
+            val intent = Intent(this, UserProfile::class.java)
+            this.startActivity(intent)
             msgShow("Perfil")
             true
+
 
         }
 

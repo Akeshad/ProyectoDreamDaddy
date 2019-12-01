@@ -5,10 +5,6 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <item
-        android:id="@+id/action_search"
-        android:title="Buscar"
-        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_profile"
@@ -16,6 +12,6 @@
 
     <item
         android:id="@+id/action_setting"
-        android:title="Opciones" />
+        android:title="Ajustes" />
 
 </menu>
