@@ -22,6 +22,7 @@
             android:windowSoftInputMode="stateHidden"></activity>
         <activity android:name=".activities.RoleSelectionActivity"></activity>
         <activity android:name=".activities.RoleSugarDaddyActivity"></activity>
+        <activity android:name=".activities.UserProfile"></activity>
         <activity android:name=".activities.FormSelectionDaddyActivity"></activity>
         <activity android:name=".activities.RoleSugarBabyActivity"></activity>
         <activity android:name=".activities.FormSelectionBabyActivity"></activity>
