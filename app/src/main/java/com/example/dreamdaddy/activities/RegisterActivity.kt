@@ -87,7 +87,9 @@ class RegisterActivity : AppCompatActivity() {
                 sugarBaby.password = findViewById<EditText>(R.id.editTextPasswordRegister).text.toString()
                 sugarBaby.birthDate = calendarDate
 
-                //TODO SUGARBABY DESPUES DE COMPLETAR TODO LO DE SUGARDADDY
+                val intent = Intent(this, GridActivity::class.java)
+                intent.putExtra("sugarbaby", sugarBaby)
+                startActivity(intent)
 
             }
 

@@ -9,6 +9,7 @@ import android.widget.GridView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dreamdaddy.R
+import com.example.dreamdaddy.classes.SugarBaby
 import com.example.dreamdaddy.classes.SugarDaddy
 
 /**
@@ -19,8 +20,9 @@ import com.example.dreamdaddy.classes.SugarDaddy
  */
 class GridActivity : AppCompatActivity() {
 
-    private lateinit var gridAdapter: GridAdapter // A custom Adapter for a GridView
-    private lateinit var gridView: GridView // The GridView to include in this Activity
+    private lateinit var gridAdapterDady: GridAdapterDady // A custom Adapter of daddys for a GridView
+    private lateinit var gridView: GridView // The GridView  to include in this Activity
+    private lateinit var gridAdapterBaby: GridAdapterBaby // A custom Adapter of babies for a GridView
 
     /**
      * Mandatory function invoked when creating the GridActivity. Here's where the custom Adapter is linked to the GridView.
@@ -34,12 +36,26 @@ class GridActivity : AppCompatActivity() {
 
         gridView = findViewById(R.id.gridLayoutGridProfiles)
 
-        val daddies = ArrayList<SugarDaddy>()
-        val daddy: SugarDaddy = intent.getSerializableExtra("sugardaddy") as SugarDaddy
-        daddies.add(daddy)
+        if (intent.hasExtra("sugardaddy")) {
 
-        gridAdapter = GridAdapter(this, daddies)
-        gridView.adapter = gridAdapter
+            val daddies = ArrayList<SugarDaddy>()
+            val daddy: SugarDaddy = intent.getSerializableExtra("sugardaddy") as SugarDaddy
+            daddies.add(daddy)
+
+            gridAdapterDady = GridAdapterDady(this, daddies)
+            gridView.adapter = gridAdapterDady
+
+        }else{
+
+            val babies = ArrayList<SugarBaby>()
+            val baby: SugarBaby = intent.getSerializableExtra("sugarbaby") as SugarBaby
+            babies.add(baby)
+
+            gridAdapterBaby = GridAdapterBaby(this, babies)
+            gridView.adapter = gridAdapterBaby
+
+        }
+
 
     }
 
