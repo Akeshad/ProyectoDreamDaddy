@@ -40,84 +40,98 @@
                 style="@style/imageButtonDaddyKindSelection"
                 android:contentDescription="@string/sugarDaddy_intellectual"
                 android:onClick="createNewDaddyIntellectual"
-                android:src="@drawable/prueba"
+                android:src="@drawable/daddy_intellectual"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelSugarDaddyRole"
-                tools:src="@drawable/prueba"
-                tools:srcCompat="@drawable/prueba" />
+                tools:src="@drawable/daddy_intellectual"
+                tools:srcCompat="@drawable/daddy_intellectual" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRole2"
-                android:contentDescription="@string/sugarDaddy_baddy"
                 style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarDaddy_baddy"
                 android:onClick="createNewDaddyBaddy"
+                android:src="@drawable/daddy_baddy"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole1"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/daddy_baddy"
+                tools:srcCompat="@drawable/daddy_baddy" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRole3"
-                android:contentDescription="@string/sugarDaddy_bear"
                 style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarDaddy_bear"
                 android:onClick="createNewDaddyBear"
+                android:src="@drawable/daddy_bear"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole2"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/daddy_bear"
+                tools:srcCompat="@drawable/daddy_bear" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRole4"
                 style="@style/imageButtonDaddyKindSelection"
                 android:contentDescription="@string/sugarDaddy_modern"
                 android:onClick="createNewDaddyModern"
+                android:src="@drawable/daddy_modern"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole3"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/daddy_modern"
+                tools:srcCompat="@drawable/daddy_modern" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRole5"
                 style="@style/imageButtonDaddyKindSelection"
                 android:contentDescription="@string/sugarDaddy_sporty"
                 android:onClick="createNewDaddySporty"
+                android:src="@drawable/daddy_sporty"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole4"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/daddy_sporty"
+                tools:srcCompat="@drawable/daddy_sporty" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRole6"
                 style="@style/imageButtonDaddyKindSelection"
                 android:contentDescription="@string/sugarDaddy_sophisticated"
                 android:onClick="createNewDaddySophisticated"
+                android:src="@drawable/daddy_sophisticated"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole5"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/daddy_sophisticated"
+                tools:srcCompat="@drawable/daddy_sophisticated" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRole7"
                 style="@style/imageButtonDaddyKindSelection"
                 android:contentDescription="@string/sugarDaddy_gothic"
                 android:onClick="createNewDaddyGothic"
+                android:src="@drawable/daddy_gothic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole6"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/daddy_gothic"
+                tools:srcCompat="@drawable/daddy_gothic" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarDaddyRole8"
                 style="@style/imageButtonDaddyKindSelection"
-                android:contentDescription="@string/sugarDaddy_other"
                 android:layout_marginBottom="50dp"
+                android:contentDescription="@string/sugarDaddy_other"
                 android:onClick="createNewDaddyOther"
+                android:src="@drawable/daddy_other"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarDaddyRole7"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/daddy_other"
+                tools:srcCompat="@drawable/daddy_other" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

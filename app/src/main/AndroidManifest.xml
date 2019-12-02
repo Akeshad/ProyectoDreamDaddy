@@ -3,32 +3,38 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dreamdaddy">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo_xhdpi"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
+        <activity android:name=".activities.MainActivity">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
+
         </activity>
-        <activity android:name=".activities.LoginActivity"></activity>
+        <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.RegisterActivity"
-            android:windowSoftInputMode="stateHidden"></activity>
-        <activity android:name=".activities.RoleSelectionActivity"></activity>
-        <activity android:name=".activities.RoleSugarDaddyActivity"></activity>
-        <activity android:name=".activities.UserProfile"></activity>
-        <activity android:name=".activities.FormSelectionDaddyActivity"></activity>
-        <activity android:name=".activities.RoleSugarBabyActivity"></activity>
-        <activity android:name=".activities.FormSelectionBabyActivity"></activity>
-        <activity android:name=".activities.GridActivity" android:theme="@style/DaddyActionBar"
-            ></activity>
-        <activity android:name=".activities.SelectedProfileActivity"></activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activities.RoleSelectionActivity" />
+        <activity android:name=".activities.RoleSugarDaddyActivity" />
+        <activity android:name=".activities.UserProfileActivity" />
+        <activity android:name=".activities.RoleSugarBabyActivity" />
+        <activity
+            android:name=".activities.GridActivity"
+            android:theme="@style/DaddyActionBar" />
+        <activity android:name=".activities.SelectedProfileActivity" />
+
     </application>
 
 </manifest>

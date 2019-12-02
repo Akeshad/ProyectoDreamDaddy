@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.GridView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dreamdaddy.R
 import com.example.dreamdaddy.classes.SugarBaby
@@ -20,9 +19,9 @@ import com.example.dreamdaddy.classes.SugarDaddy
  */
 class GridActivity : AppCompatActivity() {
 
-    private lateinit var gridAdapterDady: GridAdapterDady // A custom Adapter of daddys for a GridView
-    private lateinit var gridView: GridView // The GridView  to include in this Activity
-    private lateinit var gridAdapterBaby: GridAdapterBaby // A custom Adapter of babies for a GridView
+    private lateinit var gridAdapterDaddy: GridAdapterDaddy // A custom daddies' Adapter for a GridView
+    private lateinit var gridView: GridView // The GridView to include in this Activity
+    private lateinit var gridAdapterBaby: GridAdapterBaby // A custom babies' Adapter for a GridView
 
     /**
      * Mandatory function invoked when creating the GridActivity. Here's where the custom Adapter is linked to the GridView.
@@ -36,16 +35,16 @@ class GridActivity : AppCompatActivity() {
 
         gridView = findViewById(R.id.gridLayoutGridProfiles)
 
-        if (intent.hasExtra("sugardaddy")) {
+        if (intent.hasExtra("sugardaddy")) { // Checks if the intent contents a SugarDaddy
 
             val daddies = ArrayList<SugarDaddy>()
             val daddy: SugarDaddy = intent.getSerializableExtra("sugardaddy") as SugarDaddy
             daddies.add(daddy)
 
-            gridAdapterDady = GridAdapterDady(this, daddies)
-            gridView.adapter = gridAdapterDady
+            gridAdapterDaddy = GridAdapterDaddy(this, daddies)
+            gridView.adapter = gridAdapterDaddy
 
-        }else{
+        } else { // Checks if the intent contents a SugarBaby
 
             val babies = ArrayList<SugarBaby>()
             val baby: SugarBaby = intent.getSerializableExtra("sugarbaby") as SugarBaby
@@ -55,7 +54,6 @@ class GridActivity : AppCompatActivity() {
             gridView.adapter = gridAdapterBaby
 
         }
-
 
     }
 
@@ -75,26 +73,23 @@ class GridActivity : AppCompatActivity() {
     }
 
     /**
-     * Creates the Options Menu's Items in this Activity.
+     * Creates the Options Menu's Items in this Activity and allows to continue the App Cycle by going to other activities.
+     * These activities are UserProfileActivity and Settings.
      * @param item The Menu Item to be displayed.
      * @since November 2019
      */
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
 
-
         R.id.action_profile -> {
 
-            val intent = Intent(this, UserProfile::class.java)
+            val intent = Intent(this, UserProfileActivity::class.java)
             this.startActivity(intent)
-            msgShow("Perfil")
             true
-
 
         }
 
         R.id.action_setting -> {
 
-            msgShow("Opciones")
             true
 
         }
@@ -104,13 +99,6 @@ class GridActivity : AppCompatActivity() {
             super.onOptionsItemSelected(item)
 
         }
-
-    }
-
-    // TODO ESTO LUEGO TIENE QUE SER BORRADO
-    fun msgShow(msg: String) {
-
-        Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
 
     }
 

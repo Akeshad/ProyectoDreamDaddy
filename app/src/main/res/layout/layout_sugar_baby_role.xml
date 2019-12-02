@@ -38,78 +38,100 @@
             <ImageButton
                 android:id="@+id/imageButtonSugarBabyRole1"
                 style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarBaby_otter"
                 android:onClick="createNewBabyOtter"
-                android:src="@drawable/llamar"
+                android:src="@drawable/baby_otter"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelSugarBabyRole"
-                tools:src="@drawable/llamar"
-                tools:srcCompat="@drawable/llamar" />
+                tools:src="@drawable/baby_otter"
+                tools:srcCompat="@drawable/baby_otter" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarBabyRole2"
                 style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarBaby_spoiled"
                 android:onClick="createNewBabySpoiled"
+                android:src="@drawable/baby_spoiled"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarBabyRole1"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/baby_spoiled"
+                tools:srcCompat="@drawable/baby_spoiled" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarBabyRole3"
                 style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarBaby_fancy"
                 android:onClick="createNewBabyFancy"
+                android:src="@drawable/baby_fancy"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarBabyRole2"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/baby_fancy"
+                tools:srcCompat="@drawable/baby_fancy" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarBabyRole4"
                 style="@style/imageButtonDaddyKindSelection"
-                android:onClick="createNewBabyCup"
+                android:contentDescription="@string/sugarBaby_cub"
+                android:onClick="createNewBabyCub"
+                android:src="@drawable/baby_cub"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarBabyRole3"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/baby_cub"
+                tools:srcCompat="@drawable/baby_cub" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarBabyRole5"
                 style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarBaby_chub"
                 android:onClick="createNewBabyChub"
+                android:src="@drawable/baby_chub"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarBabyRole4"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/baby_chub"
+                tools:srcCompat="@drawable/baby_chub" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarBabyRole6"
                 style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarBaby_romantic"
                 android:onClick="createNewBabyRomantic"
+                android:src="@drawable/baby_romantic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarBabyRole5"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/baby_romantic"
+                tools:srcCompat="@drawable/baby_romantic" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarBabyRole7"
                 style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarBaby_emo"
                 android:onClick="createNewBabyEmo"
+                android:src="@drawable/baby_emo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarBabyRole6"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/baby_emo"
+                tools:srcCompat="@drawable/baby_emo" />
 
             <ImageButton
                 android:id="@+id/imageButtonSugarBabyRole8"
                 style="@style/imageButtonDaddyKindSelection"
+                android:contentDescription="@string/sugarBaby_other"
                 android:layout_marginBottom="50dp"
                 android:onClick="createNewBabyOther"
+                android:src="@drawable/baby_other"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButtonSugarBabyRole7"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:src="@drawable/baby_other"
+                tools:srcCompat="@drawable/baby_other" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

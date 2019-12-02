@@ -9,7 +9,7 @@
     <string name="label_login">¡Bienvenido!</string>
     <string name="label_sugarForm">¡Un último paso!</string>
     <string name="labelInformation">Informacion</string>
-    <string name="labelRoleSelection">¡Elige!</string>
+    <string name="labelRoleSelection">¡Elige rol!</string>
     <string name="labelSugarDaddyRole">Sugar Daddy</string>
     <string name="labelSugarBabyRole">Sugar Baby</string>
     <string name="labelSelectedProfile">Ejemplo de\nPerfil Seleccionado\nSaltos de línea</string>
@@ -41,6 +41,14 @@
     <string name="sugarDaddy_sophisticated">Sugar Daddy: Sophisticated Role</string>
     <string name="sugarDaddy_gothic">Sugar Daddy: Gothic Role</string>
     <string name="sugarDaddy_other">Sugar Daddy: Other Role</string>
+    <string name="sugarBaby_otter">Sugar Baby: Otter Role</string>
+    <string name="sugarBaby_spoiled">Sugar Baby: Spoiled Role</string>
+    <string name="sugarBaby_fancy">Sugar Baby: Fancy Role</string>
+    <string name="sugarBaby_cub">Sugar Baby: Cub Role</string>
+    <string name="sugarBaby_chub">Sugar Baby: Chub Role</string>
+    <string name="sugarBaby_romantic">Sugar Baby: Romantic Role</string>
+    <string name="sugarBaby_emo">Sugar Baby: Emo Role</string>
+    <string name="sugarBaby_other">Sugar Baby: Other Role</string>
 
     <!-- OTHERS -->
     <string name="username">Nombre de usuario</string>
@@ -48,5 +56,9 @@
     <string name="password">Contraseña</string>
     <string name="birthDate">Fecha de nacimiento</string>
     <string name="telephone">Ver número de la persona</string>
+    <string name="profile">Perfil</string>
+    <string name="settings">Ajustes</string>
+    <string name="waiting_input">Escribe el nuevo dato</string>
+    <string name="saveChanges">Guardar</string>
 
 </resources>

@@ -62,6 +62,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginRight="20dp"
+                    android:onClick="callSelectedUser"
                     android:scaleType="centerCrop"
                     android:contentDescription="@string/telephone"
                     app:srcCompat="@drawable/llamar" />

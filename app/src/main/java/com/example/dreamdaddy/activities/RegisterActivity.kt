@@ -54,6 +54,7 @@ class RegisterActivity : AppCompatActivity() {
 
     /**
      * Click event that retrieves a SugarDaddy or SugarBaby Object (depending on what the user chose before) and sets the form values into the Object.
+     * This function also continues the App Cycle by going to the GridActivity.
      * @param view Predefined view parameter. Not needed in this case.
      * @since November 2019
      */

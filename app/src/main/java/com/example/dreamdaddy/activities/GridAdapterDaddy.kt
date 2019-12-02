@@ -8,17 +8,17 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageButton
 import com.example.dreamdaddy.R
-import com.example.dreamdaddy.classes.SugarBaby
+import com.example.dreamdaddy.classes.SugarDaddy
 
 /**
- * The GridAdapterBaby class extends from BaseAdapter class as it's necessary in order to work.
+ * The GridAdapterDaddy class extends from BaseAdapter class as it's necessary in order to work.
  * It helps displaying the GridView in the GridActivity.
- * @constructor It requires two parameters: a Context and a ArrayList<SugarBaby>.
+ * @constructor It requires two parameters: a Context and a ArrayList<SugarDaddy>.
  * @param context The Activity's Context where the constructor will be invoked.
- * @param babies The ArrayList which will hold the SugarBabies displayed in the GridActivity's GridView.
+ * @param daddies The ArrayList which will hold the SugarDaddies displayed in the GridActivity's GridView.
  * @since November 2019
  */
-class GridAdapterBaby (private var context: Context, private var babies: ArrayList<SugarBaby>) : BaseAdapter() {
+class GridAdapterDaddy (private var context: Context, private var daddies: ArrayList<SugarDaddy>) : BaseAdapter() {
 
     /**
      * Mandatory implemented function invoked when implementing from BaseAdapter.
@@ -27,26 +27,26 @@ class GridAdapterBaby (private var context: Context, private var babies: ArrayLi
      */
     override fun getCount(): Int {
 
-        return babies.size
+        return daddies.size
 
     }
 
     /**
      * Mandatory implemented function invoked when implementing from BaseAdapter.
-     * It's necessary in order to select a position from the ArrayList<SugarBaby> in the GridActivity's GridView.
+     * It's necessary in order to select a position from the ArrayList<SugarDaddy> in the GridActivity's GridView.
      * @param position The index from the ArrayList<SugarDaddy>.
      * @since November 2019
      */
     override fun getItem(position: Int): Any {
 
-        return babies[position]
+        return daddies[position]
 
     }
 
     /**
      * Mandatory implemented function invoked when implementing from BaseAdapter.
-     * It's necessary in order to select the ID of the position from the ArrayList<SugarBaby> in the GridActivity's GridView.
-     * @param position The index from the ArrayList<SugarBaby>.
+     * It's necessary in order to select the ID of the position from the ArrayList<SugarDaddy> in the GridActivity's GridView.
+     * @param position The index from the ArrayList<SugarDaddy>.
      * @since November 2019
      */
     override fun getItemId(position: Int): Long {
@@ -57,9 +57,9 @@ class GridAdapterBaby (private var context: Context, private var babies: ArrayLi
 
     /**
      * Mandatory implemented function invoked when implementing from BaseAdapter.
-     * It's necessary in order to select a position from the ArrayList<SugarBaby> in the GridActivity's GridView.
+     * It's necessary in order to select a position from the ArrayList<SugarDaddy> in the GridActivity's GridView.
      * This function also allows the button to invoke the event for going to the SelectedProfileActivity in the App Cycle.
-     * @param position The index from the ArrayList<SugarBaby>.
+     * @param position The index from the ArrayList<SugarDaddy>.
      * @param convertView The view to be displayed in the GridActivity's GridView.
      * @param parent The ViewGroup in the GridActivity.
      * @since November 2019
@@ -74,14 +74,14 @@ class GridAdapterBaby (private var context: Context, private var babies: ArrayLi
 
         }
 
-        val baby = getItem(position) as SugarBaby
+        val daddy = getItem(position) as SugarDaddy
         val imageButton = view!!.findViewById<ImageButton>(R.id.imageButtonGrid)
-        imageButton.setImageResource(baby.linkImage)
+        imageButton.setImageResource(daddy.linkImage)
 
         imageButton.setOnClickListener {
 
             val nextActivity = Intent(context, SelectedProfileActivity::class.java)
-            nextActivity.putExtra("sugarbaby", baby)
+            nextActivity.putExtra("sugardaddy", daddy)
             context.startActivity(nextActivity)
 
         }

@@ -27,6 +27,7 @@ class RoleSelectionActivity : AppCompatActivity() {
 
     /**
      * Allows the transit from the RoleSelectionActivity to the RoleSugarDaddyActivity.
+     * This function also continues the App Cycle by going to the RoleSugarDaddyActivity.
      * @param view Predefined view parameter. Not needed in this case.
      * @since November 2019
      */
@@ -39,6 +40,7 @@ class RoleSelectionActivity : AppCompatActivity() {
 
     /**
      * Allows the transit from the RoleSelectionActivity to the RoleSugarBabyActivity.
+     * This function also continues the App Cycle by going to the RoleSugarBabyActivity.
      * @param view Predefined view parameter. Not needed in this case.
      * @since November 2019
      */

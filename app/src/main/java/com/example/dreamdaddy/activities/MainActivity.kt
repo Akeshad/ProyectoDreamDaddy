@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     /**
      * Allows the transit from the MainActivitity (the launching one) to the LoginActivity.
+     * This function also continues the App Cycle by going to the LoginActivity.
      * @param view Predefined view parameter. Not needed in this case.
      * @since November 2019
      */
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
 
     /**
      * Allows the transit from the MainActivitity (the launching one) to the RoleSelectionActivity.
+     * This function also continues the App Cycle by going to the RoleSelectionActivity.
      * @param view Predefined view parameter. Not needed in this case.
      * @since November 2019
      */

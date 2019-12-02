@@ -6,7 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dreamdaddy.R
 import com.example.dreamdaddy.classes.SugarDaddy
-import com.example.dreamdaddy.classes.kindDaddy
+import com.example.dreamdaddy.classes.KindDaddy
 
 /**
  * The RoleSugarDaddyActivity class extends from AppCompatActivity class as it's necessary in order to work.
@@ -28,15 +28,16 @@ class RoleSugarDaddyActivity : AppCompatActivity() {
     }
 
     /**
-     * Click event that creates a SugarDaddy Object with a kindDaddy.INTELLECTUAL and predefined avatar image bound to said Object.
+     * Click event that creates a SugarDaddy Object with a KindDaddy.INTELLECTUAL and predefined avatar image bound to said Object.
+     * This function also continues the App Cycle by going to the RegisterActivity.
      * @param view Predefined view parameter. Not needed in this case.
      * @since November 2019
      */
     fun createNewDaddyIntellectual(view: View) {
 
         val sugarDaddy = SugarDaddy()
-        sugarDaddy.kind = kindDaddy.INTELLECTUAL
-        sugarDaddy.linkImage = R.drawable.prueba
+        sugarDaddy.kind = KindDaddy.INTELLECTUAL
+        sugarDaddy.linkImage = R.drawable.daddy_intellectual
 
         val intent = Intent(this, RegisterActivity::class.java)
         intent.putExtra("sugardaddy", sugarDaddy)
@@ -45,15 +46,16 @@ class RoleSugarDaddyActivity : AppCompatActivity() {
     }
 
     /**
-     * Click event that creates a SugarDaddy Object with a kindDaddy.BADDY and predefined avatar image bound to said Object.
+     * Click event that creates a SugarDaddy Object with a KindDaddy.BADDY and predefined avatar image bound to said Object.
+     * This function also continues the App Cycle by going to the RegisterActivity.
      * @param view Predefined view parameter. Not needed in this case.
      * @since November 2019
      */
     fun createNewDaddyBaddy(view: View) {
 
         val sugarDaddy = SugarDaddy()
-        sugarDaddy.kind = kindDaddy.BADDY
-        // TODO IMAGEN DEL BADDY. PROCESAR Y LINKEAR EN ESTA LINEA
+        sugarDaddy.kind = KindDaddy.BADDY
+        sugarDaddy.linkImage = R.drawable.daddy_baddy
 
         val intent = Intent(this, RegisterActivity::class.java)
         intent.putExtra("sugardaddy", sugarDaddy)
@@ -62,15 +64,16 @@ class RoleSugarDaddyActivity : AppCompatActivity() {
     }
 
     /**
-     * Click event that creates a SugarDaddy Object with a kindDaddy.BEAR and predefined avatar image bound to said Object.
+     * Click event that creates a SugarDaddy Object with a KindDaddy.BEAR and predefined avatar image bound to said Object.
+     * This function also continues the App Cycle by going to the RegisterActivity.
      * @param view Predefined view parameter. Not needed in this case.
      * @since November 2019
      */
     fun createNewDaddyBear(view: View) {
 
         val sugarDaddy = SugarDaddy()
-        sugarDaddy.kind = kindDaddy.BEAR
-        // TODO IMAGEN DEL BEAR. PROCESAR Y LINKEAR EN ESTA LINEA
+        sugarDaddy.kind = KindDaddy.BEAR
+        sugarDaddy.linkImage = R.drawable.daddy_bear
 
         val intent = Intent(this, RegisterActivity::class.java)
         intent.putExtra("sugardaddy", sugarDaddy)
@@ -79,15 +82,16 @@ class RoleSugarDaddyActivity : AppCompatActivity() {
     }
 
     /**
-     * Click event that creates a SugarDaddy Object with a kindDaddy.MODERN and predefined avatar image bound to said Object.
+     * Click event that creates a SugarDaddy Object with a KindDaddy.MODERN and predefined avatar image bound to said Object.
+     * This function also continues the App Cycle by going to the RegisterActivity.
      * @param view Predefined view parameter. Not needed in this case.
      * @since November 2019
      */
     fun createNewDaddyModern(view: View) {
 
         val sugarDaddy = SugarDaddy()
-        sugarDaddy.kind = kindDaddy.MODERN
-        // TODO IMAGEN DEL MODERN. PROCESAR Y LINKEAR EN ESTA LINEA
+        sugarDaddy.kind = KindDaddy.MODERN
+        sugarDaddy.linkImage = R.drawable.daddy_modern
 
         val intent = Intent(this, RegisterActivity::class.java)
         intent.putExtra("sugardaddy", sugarDaddy)
@@ -96,15 +100,16 @@ class RoleSugarDaddyActivity : AppCompatActivity() {
     }
 
     /**
-     * Click event that creates a SugarDaddy Object with a kindDaddy.SPORTY and predefined avatar image bound to said Object.
+     * Click event that creates a SugarDaddy Object with a KindDaddy.SPORTY and predefined avatar image bound to said Object.
+     * This function also continues the App Cycle by going to the RegisterActivity.
      * @param view Predefined view parameter. Not needed in this case.
      * @since November 2019
      */
     fun createNewDaddySporty(view: View) {
 
         val sugarDaddy = SugarDaddy()
-        sugarDaddy.kind = kindDaddy.SPORTY
-        // TODO IMAGEN DEL SPORTY. PROCESAR Y LINKEAR EN ESTA LINEA
+        sugarDaddy.kind = KindDaddy.SPORTY
+        sugarDaddy.linkImage = R.drawable.daddy_sporty
 
         val intent = Intent(this, RegisterActivity::class.java)
         intent.putExtra("sugardaddy", sugarDaddy)
@@ -113,15 +118,16 @@ class RoleSugarDaddyActivity : AppCompatActivity() {
     }
 
     /**
-     * Click event that creates a SugarDaddy Object with a kindDaddy.SOPHISTICATED and predefined avatar image bound to said Object.
+     * Click event that creates a SugarDaddy Object with a KindDaddy.SOPHISTICATED and predefined avatar image bound to said Object.
+     * This function also continues the App Cycle by going to the RegisterActivity.
      * @param view Predefined view parameter. Not needed in this case.
      * @since November 2019
      */
     fun createNewDaddySophisticated(view: View) {
 
         val sugarDaddy = SugarDaddy()
-        sugarDaddy.kind = kindDaddy.SOPHISTICATED
-        // TODO IMAGEN DEL SOPHISTICATED. PROCESAR Y LINKEAR EN ESTA LINEA
+        sugarDaddy.kind = KindDaddy.SOPHISTICATED
+        sugarDaddy.linkImage = R.drawable.daddy_sophisticated
 
         val intent = Intent(this, RegisterActivity::class.java)
         intent.putExtra("sugardaddy", sugarDaddy)
@@ -130,15 +136,16 @@ class RoleSugarDaddyActivity : AppCompatActivity() {
     }
 
     /**
-     * Click event that creates a SugarDaddy Object with a kindDaddy.GOTHIC and predefined avatar image bound to said Object.
+     * Click event that creates a SugarDaddy Object with a KindDaddy.GOTHIC and predefined avatar image bound to said Object.
+     * This function also continues the App Cycle by going to the RegisterActivity.
      * @param view Predefined view parameter. Not needed in this case.
      * @since November 2019
      */
     fun createNewDaddyGothic(view: View) {
 
         val sugarDaddy = SugarDaddy()
-        sugarDaddy.kind = kindDaddy.GOTHIC
-        // TODO IMAGEN DEL GOTHIC. PROCESAR Y LINKEAR EN ESTA LINEA
+        sugarDaddy.kind = KindDaddy.GOTHIC
+        sugarDaddy.linkImage = R.drawable.daddy_gothic
 
         val intent = Intent(this, RegisterActivity::class.java)
         intent.putExtra("sugardaddy", sugarDaddy)
@@ -147,15 +154,16 @@ class RoleSugarDaddyActivity : AppCompatActivity() {
     }
 
     /**
-     * Click event that creates a SugarDaddy Object with a kindDaddy.OTHER and predefined avatar image bound to said Object.
+     * Click event that creates a SugarDaddy Object with a KindDaddy.OTHER and predefined avatar image bound to said Object.
+     * This function also continues the App Cycle by going to the RegisterActivity.
      * @param view Predefined view parameter. Not needed in this case.
      * @since November 2019
      */
     fun createNewDaddyOther(view: View) {
 
         val sugarDaddy = SugarDaddy()
-        sugarDaddy.kind = kindDaddy.OTHER
-        // TODO IMAGEN DEL OTHER. PROCESAR Y LINKEAR EN ESTA LINEA
+        sugarDaddy.kind = KindDaddy.OTHER
+        sugarDaddy.linkImage = R.drawable.daddy_other
 
         val intent = Intent(this, RegisterActivity::class.java)
         intent.putExtra("sugardaddy", sugarDaddy)
