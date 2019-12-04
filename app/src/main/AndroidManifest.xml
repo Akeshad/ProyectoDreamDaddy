@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.PreferenceActivity"></activity>
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,15 +17,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LoginActivity"></activity>
-        <activity android:name=".activities.RegisterActivity"></activity>
-        <activity android:name=".activities.RoleSelectionActivity"></activity>
-        <activity android:name=".activities.RoleSugarDaddyActivity"></activity>
-        <activity android:name=".activities.FormSelectionDaddyActivity"></activity>
-        <activity android:name=".activities.RoleSugarBabyActivity"></activity>
-        <activity android:name=".activities.FormSelectionBabyActivity"></activity>
-        <activity android:name=".activities.GridDaddysActivity"></activity>
-        <activity android:name=".activities.SelectedProfileActivity"></activity>
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.RoleSelectionActivity" />
+        <activity android:name=".activities.RoleSugarDaddyActivity" />
+        <activity android:name=".activities.FormSelectionDaddyActivity" />
+        <activity android:name=".activities.RoleSugarBabyActivity" />
+        <activity android:name=".activities.FormSelectionBabyActivity" />
+        <activity android:name=".activities.GridDaddysActivity" />
+        <activity android:name=".activities.SelectedProfileActivity" />
     </application>
 
 </manifest>
