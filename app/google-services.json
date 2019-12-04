@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "826800312490",
+    "firebase_url": "https://dreamdaddy-71217.firebaseio.com",
+    "project_id": "dreamdaddy-71217",
+    "storage_bucket": "dreamdaddy-71217.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826800312490:android:4e3a81163b9e80c4da80d3",
+        "android_client_info": {
+          "package_name": "com.example.dreamdaddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826800312490-is0iddac9aqpfi2jbf7kafn1351c8pnv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dreamdaddy",
+            "certificate_hash": "3b45fe1ce944736e7472b8deca48d7a0a8426015"
+          }
+        },
+        {
+          "client_id": "826800312490-pkdo934bscc2ejtqqrfe2edfetmdlamj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ9wMrty7fedOmNVvNQfVD46eba2Xslk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826800312490-pkdo934bscc2ejtqqrfe2edfetmdlamj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -10,6 +10,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.dreamdaddy.R
 import com.example.dreamdaddy.classes.SugarBaby
 import com.example.dreamdaddy.classes.SugarDaddy
+import com.google.firebase.database.*
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * The GridActivity class extends from AppCompatActivity class as it's necessary in order to work.
@@ -23,6 +28,8 @@ class GridActivity : AppCompatActivity() {
     private lateinit var gridView: GridView // The GridView to include in this Activity
     private lateinit var gridAdapterBaby: GridAdapterBaby // A custom babies' Adapter for a GridView
 
+    private val context = this
+
     /**
      * Mandatory function invoked when creating the GridActivity. Here's where the custom Adapter is linked to the GridView.
      * @param savedInstanceState If needed to import information from another Activity. Not needed in this case.
@@ -33,16 +40,59 @@ class GridActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_grid_profiles)
 
+        val myFirebase = FirebaseDatabase.getInstance().reference
+
         gridView = findViewById(R.id.gridLayoutGridProfiles)
 
         if (intent.hasExtra("sugardaddy")) { // Checks if the intent contents a SugarDaddy
 
             val daddies = ArrayList<SugarDaddy>()
-            val daddy: SugarDaddy = intent.getSerializableExtra("sugardaddy") as SugarDaddy
-            daddies.add(daddy)
+            // val daddy: SugarDaddy = intent.getSerializableExtra("sugardaddy") as SugarDaddy
+            // daddies.add(daddy)
 
-            gridAdapterDaddy = GridAdapterDaddy(this, daddies)
-            gridView.adapter = gridAdapterDaddy
+            myFirebase.child("dreamdaddy").addValueEventListener(object : ValueEventListener {
+
+                override fun onDataChange(snapshot: DataSnapshot) {
+
+                    if (snapshot.exists()) {
+
+                        for (ds in snapshot.getChildren()) {
+
+                            val nickname = ds.child("nickname").value.toString()
+                            val linkImage = ds.child("linkImage").value.toString()
+                            val birthDate = ds.child("birthDate").value.toString()
+                            val telephone = ds.child("telephone").value.toString()
+
+
+                            val daddy = SugarDaddy()
+                            daddy.nickname = nickname
+                            daddy.linkImage = Integer.parseInt(linkImage)
+
+                           val sdf : SimpleDateFormat =  SimpleDateFormat("MM dd yyyy")
+
+                            val date : Date =  sdf.parse(birthDate)
+                            val cal : Calendar = sdf.calendar
+
+                            daddy.birthDate = cal
+                            daddy.telephone = telephone
+
+                            daddies.add(daddy)
+
+                        }
+
+                        gridAdapterDaddy = GridAdapterDaddy(context, daddies)
+                        gridView.adapter = gridAdapterDaddy
+
+                    }
+
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+            })
+
+
 
         } else { // Checks if the intent contents a SugarBaby
 

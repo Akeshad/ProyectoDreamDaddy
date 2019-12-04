@@ -50,6 +50,10 @@
     <string name="sugarBaby_emo">Sugar Baby: Emo Role</string>
     <string name="sugarBaby_other">Sugar Baby: Other Role</string>
 
+    <!-- CLOUD FIRESTORE -->
+    <string name="insertSuccess">¡Registrado correctamente!</string>
+    <string name="insertFailure">Error al registrarse. Prueba de nuevo.</string>
+
     <!-- OTHERS -->
     <string name="username">Nombre de usuario</string>
     <string name="email">Email</string>

@@ -5,12 +5,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dreamdaddy.R
 import com.example.dreamdaddy.classes.SugarBaby
 import com.example.dreamdaddy.classes.SugarDaddy
+import com.google.android.gms.tasks.OnFailureListener
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.layout_register.*
+import java.text.DateFormat
 import java.util.*
+import kotlin.collections.HashMap
 
 /**
  * The RegisterActivity class extends from AppCompatActivity class as it's necessary in order to work.
@@ -60,6 +65,8 @@ class RegisterActivity : AppCompatActivity() {
      */
     fun subscribeNewUser(view: View) {
 
+        val myFirebase = FirebaseFirestore.getInstance()
+
         if (intent.hasExtra("sugardaddy")) { // Checks if the user chose to be a SugarDaddy
 
             val sugarDaddy: SugarDaddy? = intent.getSerializableExtra("sugardaddy") as SugarDaddy
@@ -74,6 +81,20 @@ class RegisterActivity : AppCompatActivity() {
                 val intent = Intent(this, GridActivity::class.java)
                 intent.putExtra("sugardaddy", sugarDaddy)
                 startActivity(intent)
+
+                //-------------------------------------------DATABASE-------------------------------
+
+                val mapDaddy = HashMap<String, Any>()
+                mapDaddy.put("birthDate", DateFormat.getDateInstance().format(sugarDaddy.birthDate.time).toString())
+                mapDaddy.put("email", sugarDaddy.email)
+                mapDaddy.put("kind", sugarDaddy.kind)
+                mapDaddy.put("nickname", sugarDaddy.nickname)
+                mapDaddy.put("password", sugarDaddy.password)
+                mapDaddy.put("linkImage", sugarDaddy.linkImage)
+                mapDaddy.put("telephone", 0) // TODO ESTE SE TENDRA QUE BORRAR, ESTA DE PRUEBAS
+
+                myFirebase.collection("dreamdaddy").add(mapDaddy).addOnSuccessListener { Toast.makeText(this, resources.getString(R.string.insertSuccess), Toast.LENGTH_LONG).show() }
+                        .addOnFailureListener { Toast.makeText(this, resources.getString(R.string.insertFailure), Toast.LENGTH_LONG).show() }
 
             }
 
@@ -91,6 +112,19 @@ class RegisterActivity : AppCompatActivity() {
                 val intent = Intent(this, GridActivity::class.java)
                 intent.putExtra("sugarbaby", sugarBaby)
                 startActivity(intent)
+
+                //-------------------------------------------DATABASE-------------------------------
+
+                val mapBaby = HashMap<String, Any>()
+                mapBaby.put("birthDate", DateFormat.getDateInstance().format(sugarBaby.birthDate.time).toString())
+                mapBaby.put("email", sugarBaby.email)
+                mapBaby.put("kind", sugarBaby.kind)
+                mapBaby.put("nickname", sugarBaby.nickname)
+                mapBaby.put("password", sugarBaby.password)
+                mapBaby.put("linkImage", sugarBaby.linkImage)
+
+                myFirebase.collection("dreamdaddy").add(mapBaby).addOnSuccessListener { Toast.makeText(this, resources.getString(R.string.insertSuccess), Toast.LENGTH_LONG).show() }
+                        .addOnFailureListener { Toast.makeText(this, resources.getString(R.string.insertFailure), Toast.LENGTH_LONG).show() }
 
             }
 
