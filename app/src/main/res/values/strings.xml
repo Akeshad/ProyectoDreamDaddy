@@ -53,6 +53,8 @@
     <!-- CLOUD FIRESTORE -->
     <string name="insertSuccess">¡Registrado correctamente!</string>
     <string name="insertFailure">Error al registrarse. Prueba de nuevo.</string>
+    <string name="loginSuccess">¡Iniciaste sesión!</string>
+    <string name="loginFailure">Error al iniciar sesión. Prueba de nuevo.</string>
 
     <!-- OTHERS -->
     <string name="username">Nombre de usuario</string>

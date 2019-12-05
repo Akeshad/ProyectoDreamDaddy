@@ -1,5 +1,6 @@
 package com.example.dreamdaddy.activities
 
+import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +11,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.dreamdaddy.R
 import com.example.dreamdaddy.classes.SugarBaby
 import com.example.dreamdaddy.classes.SugarDaddy
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.OnFailureListener
+import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.layout_register.*
 import java.text.DateFormat
@@ -78,11 +83,9 @@ class RegisterActivity : AppCompatActivity() {
                 sugarDaddy.password = findViewById<EditText>(R.id.editTextPasswordRegister).text.toString()
                 sugarDaddy.birthDate = calendarDate
 
-                val intent = Intent(this, GridActivity::class.java)
-                intent.putExtra("sugardaddy", sugarDaddy)
-                startActivity(intent)
 
-                //-------------------------------------------DATABASE-------------------------------
+
+                //-------------------------------------------DATABASE Inserts----------------------------
 
                 val mapDaddy = HashMap<String, Any>()
                 mapDaddy.put("birthDate", DateFormat.getDateInstance().format(sugarDaddy.birthDate.time).toString())
@@ -96,40 +99,84 @@ class RegisterActivity : AppCompatActivity() {
                 myFirebase.collection("dreamdaddy").add(mapDaddy).addOnSuccessListener { Toast.makeText(this, resources.getString(R.string.insertSuccess), Toast.LENGTH_LONG).show() }
                         .addOnFailureListener { Toast.makeText(this, resources.getString(R.string.insertFailure), Toast.LENGTH_LONG).show() }
 
-            }
+                //-------------------------------------------DATABASE Register User----------------------------
 
-        } else { // If the user chose to be a SugarBaby
+                val estaActividad = this
 
-            val sugarBaby: SugarBaby? = intent.getSerializableExtra("sugarbaby") as SugarBaby
+                val auth = FirebaseAuth.getInstance()
+                //Al usarla dentro de task, la variable t ha de ser declarada final
+                val t = auth.createUserWithEmailAndPassword(sugarDaddy.email, sugarDaddy.password)
+                t.addOnCompleteListener(this, object : OnCompleteListener<AuthResult> {
+                    override fun onComplete(p0: Task<AuthResult>) {
+                        if (t.isSuccessful) {
+                            Toast.makeText(estaActividad, "Completado con éxito", Toast.LENGTH_LONG).show()
+                        }else{
+                            Toast.makeText(estaActividad, "Todo mal", Toast.LENGTH_LONG).show()
+                        }
+                    }
+                })
 
-            if (sugarBaby != null) {
-
-                sugarBaby.nickname = findViewById<EditText>(R.id.editTextUsernameRegister).text.toString()
-                sugarBaby.email = findViewById<EditText>(R.id.editTextEmailRegister).text.toString()
-                sugarBaby.password = findViewById<EditText>(R.id.editTextPasswordRegister).text.toString()
-                sugarBaby.birthDate = calendarDate
+                //---------------INTENT--------------------------------
 
                 val intent = Intent(this, GridActivity::class.java)
-                intent.putExtra("sugarbaby", sugarBaby)
+                intent.putExtra("sugardaddy", sugarDaddy)
                 startActivity(intent)
 
-                //-------------------------------------------DATABASE-------------------------------
 
-                val mapBaby = HashMap<String, Any>()
-                mapBaby.put("birthDate", DateFormat.getDateInstance().format(sugarBaby.birthDate.time).toString())
-                mapBaby.put("email", sugarBaby.email)
-                mapBaby.put("kind", sugarBaby.kind)
-                mapBaby.put("nickname", sugarBaby.nickname)
-                mapBaby.put("password", sugarBaby.password)
-                mapBaby.put("linkImage", sugarBaby.linkImage)
 
-                myFirebase.collection("dreamdaddy").add(mapBaby).addOnSuccessListener { Toast.makeText(this, resources.getString(R.string.insertSuccess), Toast.LENGTH_LONG).show() }
-                        .addOnFailureListener { Toast.makeText(this, resources.getString(R.string.insertFailure), Toast.LENGTH_LONG).show() }
+            } else { // If the user chose to be a SugarBaby
+
+                val sugarBaby: SugarBaby? = intent.getSerializableExtra("sugarbaby") as SugarBaby
+
+                if (sugarBaby != null) {
+
+                    sugarBaby.nickname = findViewById<EditText>(R.id.editTextUsernameRegister).text.toString()
+                    sugarBaby.email = findViewById<EditText>(R.id.editTextEmailRegister).text.toString()
+                    sugarBaby.password = findViewById<EditText>(R.id.editTextPasswordRegister).text.toString()
+                    sugarBaby.birthDate = calendarDate
+
+
+
+                    //-------------------------------------------DATABASE-------------------------------
+
+                    val mapBaby = HashMap<String, Any>()
+                    mapBaby.put("birthDate", DateFormat.getDateInstance().format(sugarBaby.birthDate.time).toString())
+                    mapBaby.put("email", sugarBaby.email)
+                    mapBaby.put("kind", sugarBaby.kind)
+                    mapBaby.put("nickname", sugarBaby.nickname)
+                    mapBaby.put("password", sugarBaby.password)
+                    mapBaby.put("linkImage", sugarBaby.linkImage)
+
+                    myFirebase.collection("dreamdaddy").add(mapBaby).addOnSuccessListener { Toast.makeText(this, resources.getString(R.string.insertSuccess), Toast.LENGTH_LONG).show() }
+                            .addOnFailureListener { Toast.makeText(this, resources.getString(R.string.insertFailure), Toast.LENGTH_LONG).show() }
+
+                    //-------------------------------------------DATABASE Register User----------------------------
+
+                    val estaActividad = this
+
+                    val auth = FirebaseAuth.getInstance()
+                    //Al usarla dentro de task, la variable t ha de ser declarada final
+                    val t = auth.createUserWithEmailAndPassword(sugarBaby.email, sugarBaby.password)
+                    t.addOnCompleteListener(this, object : OnCompleteListener<AuthResult> {
+                        override fun onComplete(p0: Task<AuthResult>) {
+                            if (t.isSuccessful) {
+                                Toast.makeText(estaActividad, "Completado con éxito", Toast.LENGTH_LONG).show()
+                            }else{
+                                Toast.makeText(estaActividad, "Todo mal", Toast.LENGTH_LONG).show()
+                            }
+                        }
+                    })
+
+                    //-------------------INTENT--------------------------------
+
+                    val intent = Intent(this, GridActivity::class.java)
+                    intent.putExtra("sugarbaby", sugarBaby)
+                    startActivity(intent)
+                }
 
             }
 
         }
 
     }
-
 }
