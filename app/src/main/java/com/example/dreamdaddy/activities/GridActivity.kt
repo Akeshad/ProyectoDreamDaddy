@@ -235,11 +235,11 @@ class GridActivity : AppCompatActivity() {
             babies.add(baby5)
 
             val baby6 = SugarBaby() // Sixth SugarBaby sample
-            baby6.nickname = "Malfurion"
-            baby6.kind = KindBaby.CHUB
-            baby6.linkImage = R.drawable.baby_chub
+            baby6.nickname = "Jesse"
+            baby6.kind = KindBaby.OTTER
+            baby6.linkImage = R.drawable.baby_otter
             val sdf6 = SimpleDateFormat("MM-dd-yyyy")
-            val date6: Date? = sdf6.parse("3-1-1991")
+            val date6: Date? = sdf6.parse("11-13-1994")
             val cal6 = sdf6.calendar
             baby6.birthDate = cal6
             baby6.telephone = "555555666"
