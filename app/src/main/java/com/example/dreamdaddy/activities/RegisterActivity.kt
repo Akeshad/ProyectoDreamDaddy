@@ -86,7 +86,6 @@ class RegisterActivity : AppCompatActivity() {
                 mapDaddy.put("nickname", sugarDaddy.nickname)
                 mapDaddy.put("password", sugarDaddy.password)
                 mapDaddy.put("linkImage", sugarDaddy.linkImage)
-                mapDaddy.put("telephone", 0) // TODO ESTE SE TENDRA QUE BORRAR, ESTA DE PRUEBAS
 
                 // Inserts the SugarDaddy into Cloud Firestore
                 myFirebase.collection("dreamdaddy").add(mapDaddy).addOnSuccessListener { Toast.makeText(this, resources.getString(R.string.insertSuccess), Toast.LENGTH_LONG).show() }

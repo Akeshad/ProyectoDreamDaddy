@@ -2,10 +2,7 @@ package com.example.dreamdaddy.activities
 
 import android.os.Bundle
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.EditText
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dreamdaddy.R
 import com.example.dreamdaddy.classes.SugarBaby
@@ -43,41 +40,51 @@ class UserProfileActivity : AppCompatActivity() {
 
             selectOperation.adapter = adapter
 
-            when (this.selectOperation.selectedItem.toString()) { // Spinner's switch options
+            selectOperation.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
-                "Teléfono" -> {
+                override fun onNothingSelected(p0: AdapterView<*>?) {}
 
-                    inputTelephone.visibility = EditText.VISIBLE
-                    inputNickname.visibility = EditText.GONE
-                    inputMoney.visibility = EditText.GONE
-                    inputPassword.visibility = EditText.GONE
+                override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
 
-                }
+                    when (selectOperation.selectedItem.toString()) { // SugarDaddy Spinner's switch options
 
-                "Nickname" -> {
+                        "Teléfono" -> {
 
-                    inputTelephone.visibility = EditText.GONE
-                    inputNickname.visibility = EditText.VISIBLE
-                    inputMoney.visibility = EditText.GONE
-                    inputPassword.visibility = EditText.GONE
+                            inputTelephone.visibility = EditText.VISIBLE
+                            inputNickname.visibility = EditText.GONE
+                            inputMoney.visibility = EditText.GONE
+                            inputPassword.visibility = EditText.GONE
 
-                }
+                        }
 
-                "Sueldo anual" -> {
+                        "Nickname" -> {
 
-                    inputTelephone.visibility = EditText.GONE
-                    inputNickname.visibility = EditText.GONE
-                    inputMoney.visibility = EditText.VISIBLE
-                    inputPassword.visibility = EditText.GONE
+                            inputTelephone.visibility = EditText.GONE
+                            inputNickname.visibility = EditText.VISIBLE
+                            inputMoney.visibility = EditText.GONE
+                            inputPassword.visibility = EditText.GONE
 
-                }
+                        }
 
-                "Contraseña" -> {
+                        "Sueldo anual" -> {
 
-                    inputTelephone.visibility = EditText.GONE
-                    inputNickname.visibility = EditText.GONE
-                    inputMoney.visibility = EditText.GONE
-                    inputPassword.visibility = EditText.VISIBLE
+                            inputTelephone.visibility = EditText.GONE
+                            inputNickname.visibility = EditText.GONE
+                            inputMoney.visibility = EditText.VISIBLE
+                            inputPassword.visibility = EditText.GONE
+
+                        }
+
+                        "Contraseña" -> {
+
+                            inputTelephone.visibility = EditText.GONE
+                            inputNickname.visibility = EditText.GONE
+                            inputMoney.visibility = EditText.GONE
+                            inputPassword.visibility = EditText.VISIBLE
+
+                        }
+
+                    }
 
                 }
 
@@ -90,32 +97,42 @@ class UserProfileActivity : AppCompatActivity() {
 
             selectOperation.adapter = adapter
 
-            when (this.selectOperation.selectedItem.toString()) { // Spinner's switch options
+            selectOperation.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
-                "Teléfono" -> {
+                override fun onNothingSelected(p0: AdapterView<*>?) {}
 
-                    inputTelephone.visibility = EditText.VISIBLE
-                    inputNickname.visibility = EditText.GONE
-                    inputMoney.visibility = EditText.GONE
-                    inputPassword.visibility = EditText.GONE
+                override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
 
-                }
+                    when (selectOperation.selectedItem.toString()) { // SugarBaby Spinner's switch options
 
-                "Nickname" -> {
+                        "Teléfono" -> {
 
-                    inputTelephone.visibility = EditText.GONE
-                    inputNickname.visibility = EditText.VISIBLE
-                    inputMoney.visibility = EditText.GONE
-                    inputPassword.visibility = EditText.GONE
+                            inputTelephone.visibility = EditText.VISIBLE
+                            inputNickname.visibility = EditText.GONE
+                            inputMoney.visibility = EditText.GONE
+                            inputPassword.visibility = EditText.GONE
 
-                }
+                        }
 
-                "Contraseña" -> {
+                        "Nickname" -> {
 
-                    inputTelephone.visibility = EditText.GONE
-                    inputNickname.visibility = EditText.GONE
-                    inputMoney.visibility = EditText.GONE
-                    inputPassword.visibility = EditText.VISIBLE
+                            inputTelephone.visibility = EditText.GONE
+                            inputNickname.visibility = EditText.VISIBLE
+                            inputMoney.visibility = EditText.GONE
+                            inputPassword.visibility = EditText.GONE
+
+                        }
+
+                        "Contraseña" -> {
+
+                            inputTelephone.visibility = EditText.GONE
+                            inputNickname.visibility = EditText.GONE
+                            inputMoney.visibility = EditText.GONE
+                            inputPassword.visibility = EditText.VISIBLE
+
+                        }
+
+                    }
 
                 }
 
@@ -133,11 +150,11 @@ class UserProfileActivity : AppCompatActivity() {
      */
     fun saveChanges(view: View) {
 
-        if (intent.hasExtra("sugardaddy")) {
+        if (intent.hasExtra("sugardaddy")) { // Checks if the user is a SugarDaddy
 
             val daddy = intent.getSerializableExtra("sugardaddy") as SugarDaddy
 
-            when (this.selectOperation.selectedItem.toString()) { // Spinner's switch options
+            when (this.selectOperation.selectedItem.toString()) { // SugarDaddy Spinner's switch options
 
                 "Teléfono" -> {
 
@@ -155,7 +172,7 @@ class UserProfileActivity : AppCompatActivity() {
 
                 "Nickname" -> {
 
-                    if (inputTelephone.text.isNotEmpty()) {
+                    if (inputNickname.text.isNotEmpty()) {
 
                         daddy.nickname = inputTelephone.text.toString()
 
@@ -169,7 +186,7 @@ class UserProfileActivity : AppCompatActivity() {
 
                 "Sueldo anual" -> {
 
-                    if (inputTelephone.text.isNotEmpty()) {
+                    if (inputMoney.text.isNotEmpty()) {
 
                         daddy.setMoney(Integer.parseInt(inputTelephone.text.toString()))
 
@@ -183,7 +200,7 @@ class UserProfileActivity : AppCompatActivity() {
 
                 "Contraseña" -> {
 
-                    if (inputTelephone.text.isNotEmpty()) {
+                    if (inputPassword.text.isNotEmpty()) {
 
                         daddy.password = inputTelephone.text.toString()
 
@@ -197,11 +214,11 @@ class UserProfileActivity : AppCompatActivity() {
 
             }
 
-        } else {
+        } else { // Checks if the user is a SugarBaby
 
             val baby = intent.getSerializableExtra("sugarbaby") as SugarBaby
 
-            when (this.selectOperation.selectedItem.toString()) { // Spinner's switch options
+            when (this.selectOperation.selectedItem.toString()) { // SugarBaby Spinner's switch options
 
                 "Teléfono" -> {
 
@@ -219,7 +236,7 @@ class UserProfileActivity : AppCompatActivity() {
 
                 "Nickname" -> {
 
-                    if (inputTelephone.text.isNotEmpty()) {
+                    if (inputNickname.text.isNotEmpty()) {
 
                         baby.nickname = inputTelephone.text.toString()
 
@@ -233,7 +250,7 @@ class UserProfileActivity : AppCompatActivity() {
 
                 "Contraseña" -> {
 
-                    if (inputTelephone.text.isNotEmpty()) {
+                    if (inputPassword.text.isNotEmpty()) {
 
                         baby.password = inputTelephone.text.toString()
 

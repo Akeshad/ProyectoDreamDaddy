@@ -7,7 +7,6 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.app.ActivityCompat
@@ -32,6 +31,7 @@ class SelectedProfileActivity : AppCompatActivity() {
 
     private val callPermission: Array<String> = arrayOf(CALL_PHONE) // Array of String for the Call Phone's permission
     private val callPermissionCode = 100 // Random number given to said permission
+    private val context = this // This Activity's context
 
     /**
      * Mandatory function invoked when creating the SelectedProfileActivity.
@@ -82,9 +82,8 @@ class SelectedProfileActivity : AppCompatActivity() {
 
         } else { // Checks if the user has granted permission for call phones
 
-            val call = Intent(Intent.ACTION_CALL)
-            intent.setData(Uri.parse("tel: $telephone"))
-            startActivity(call)
+            val call = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + telephone))
+            context.startActivity(call)
 
         }
 

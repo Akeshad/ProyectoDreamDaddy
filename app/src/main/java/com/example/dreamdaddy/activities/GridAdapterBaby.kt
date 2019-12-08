@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageButton
+import android.widget.TextView
 import com.example.dreamdaddy.R
 import com.example.dreamdaddy.classes.SugarBaby
 
@@ -76,7 +77,9 @@ class GridAdapterBaby (private var context: Context, private var babies: ArrayLi
 
         val baby = getItem(position) as SugarBaby
         val imageButton = view!!.findViewById<ImageButton>(R.id.imageButtonGrid)
+        val textBaby = view.findViewById<TextView>(R.id.textViewProfileGrid)
         imageButton.setImageResource(baby.linkImage)
+        textBaby.text = baby.nickname
 
         imageButton.setOnClickListener {
 
