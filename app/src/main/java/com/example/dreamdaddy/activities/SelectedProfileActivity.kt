@@ -1,7 +1,9 @@
 package com.example.dreamdaddy.activities
 
 import android.Manifest.permission.CALL_PHONE
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -23,13 +25,13 @@ class SelectedProfileActivity : AppCompatActivity() {
 
     private lateinit var daddy: SugarDaddy // If the user is a SugarDaddy
     private lateinit var baby: SugarBaby // If the user is a SugarBaby
+    private lateinit var telephone: String // The phone of the selected user
 
     private val avatar by lazy { findViewById<ImageView>(R.id.imageViewSelectedProfile) } // Avatar of the selected profile
     private val textInfo by lazy { findViewById<TextView>(R.id.textViewSelectedProfile) } // Written data of the selected profile
-    private val phoneButton by lazy { findViewById<ImageButton>(R.id.imageButtonPhoneSelectedProfile) } // Button for calling the selected profile
 
-    private val callPermission: Array<String> = arrayOf(CALL_PHONE)
-    private val callPermissionCode = 100
+    private val callPermission: Array<String> = arrayOf(CALL_PHONE) // Array of String for the Call Phone's permission
+    private val callPermissionCode = 100 // Random number given to said permission
 
     /**
      * Mandatory function invoked when creating the SelectedProfileActivity.
@@ -41,17 +43,19 @@ class SelectedProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_selected_profile)
 
-        if (intent.hasExtra("sugardaddy")) {
+        if (intent.hasExtra("sugardaddy")) { // Checks if the selected profile is a SugarDaddy
 
             daddy = intent.getSerializableExtra("sugardaddy") as SugarDaddy
             avatar.setImageResource(daddy.linkImage)
             textInfo.text = daddy.nickname + "\n" + DateFormat.getDateInstance().format(daddy.birthDate.time) + "\n" + daddy.getMoney()
+            telephone = daddy.telephone
 
-        } else {
+        } else { // The selected profile is a SugarBaby
 
             baby = intent.getSerializableExtra("sugarbaby") as SugarBaby
             avatar.setImageResource(baby.linkImage)
             textInfo.text = baby.nickname + "\n" + DateFormat.getDateInstance().format(baby.birthDate.time) + "\n" + baby.caresAboutMoney()
+            telephone = baby.telephone
 
         }
 
@@ -78,7 +82,9 @@ class SelectedProfileActivity : AppCompatActivity() {
 
         } else { // Checks if the user has granted permission for call phones
 
-            // TODO PREPARAR LA LLAMADA AL TELÉFONO DEL PERFIL SELECCIONADO
+            val call = Intent(Intent.ACTION_CALL)
+            intent.setData(Uri.parse("tel: $telephone"))
+            startActivity(call)
 
         }
 

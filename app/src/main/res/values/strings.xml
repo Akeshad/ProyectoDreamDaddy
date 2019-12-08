@@ -52,7 +52,9 @@
 
     <!-- CLOUD FIRESTORE -->
     <string name="insertSuccess">¡Registrado correctamente!</string>
-    <string name="insertFailure">Error al registrarse. Prueba de nuevo.</string>
+    <string name="insertFailure">Error al registrarse. Prueba de nuevo</string>
+    <string name="credentialsSuccess">Credenciales creadas</string>
+    <string name="credentialsFailure">Error creando credenciales</string>
     <string name="loginSuccess">¡Iniciaste sesión!</string>
     <string name="loginFailure">Error al iniciar sesión. Prueba de nuevo.</string>
 
@@ -66,5 +68,6 @@
     <string name="settings">Ajustes</string>
     <string name="waiting_input">Escribe el nuevo dato</string>
     <string name="saveChanges">Guardar</string>
+    <string name="emptyInput">¡El campo está vacío!</string>
 
 </resources>

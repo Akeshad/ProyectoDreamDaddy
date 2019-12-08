@@ -11,7 +11,6 @@ import com.example.dreamdaddy.R
 import com.example.dreamdaddy.classes.SugarBaby
 import com.example.dreamdaddy.classes.SugarDaddy
 import com.google.firebase.database.*
-import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -27,8 +26,10 @@ class GridActivity : AppCompatActivity() {
     private lateinit var gridAdapterDaddy: GridAdapterDaddy // A custom daddies' Adapter for a GridView
     private lateinit var gridView: GridView // The GridView to include in this Activity
     private lateinit var gridAdapterBaby: GridAdapterBaby // A custom babies' Adapter for a GridView
+    private lateinit var intentDaddy: SugarDaddy // Registered SugarDaddy
+    private lateinit var intentBaby: SugarBaby // Registered SugarBaby
 
-    private val context = this
+    private val context = this // This Activity's context
 
     /**
      * Mandatory function invoked when creating the GridActivity. Here's where the custom Adapter is linked to the GridView.
@@ -45,6 +46,8 @@ class GridActivity : AppCompatActivity() {
         gridView = findViewById(R.id.gridLayoutGridProfiles)
 
         if (intent.hasExtra("sugardaddy")) { // Checks if the intent contents a SugarDaddy
+
+            intentDaddy = intent.getSerializableExtra("sugardaddy") as SugarDaddy
 
             val daddies = ArrayList<SugarDaddy>()
             // val daddy: SugarDaddy = intent.getSerializableExtra("sugardaddy") as SugarDaddy
@@ -63,15 +66,14 @@ class GridActivity : AppCompatActivity() {
                             val birthDate = ds.child("birthDate").value.toString()
                             val telephone = ds.child("telephone").value.toString()
 
-
                             val daddy = SugarDaddy()
                             daddy.nickname = nickname
                             daddy.linkImage = Integer.parseInt(linkImage)
 
-                           val sdf : SimpleDateFormat =  SimpleDateFormat("MM dd yyyy")
+                            val sdf = SimpleDateFormat("MM dd yyyy")
 
-                            val date : Date =  sdf.parse(birthDate)
-                            val cal : Calendar = sdf.calendar
+                            val date: Date? = sdf.parse(birthDate)
+                            val cal: Calendar = sdf.calendar
 
                             daddy.birthDate = cal
                             daddy.telephone = telephone
@@ -90,15 +92,16 @@ class GridActivity : AppCompatActivity() {
                 override fun onCancelled(error: DatabaseError) {
 
                 }
+
             })
-
-
 
         } else { // Checks if the intent contents a SugarBaby
 
+            intentBaby = intent.getSerializableExtra("sugarbaby") as SugarBaby
+
             val babies = ArrayList<SugarBaby>()
-            val baby: SugarBaby = intent.getSerializableExtra("sugarbaby") as SugarBaby
-            babies.add(baby)
+            // val baby: SugarBaby = intent.getSerializableExtra("sugarbaby") as SugarBaby
+            // babies.add(baby)
 
             gridAdapterBaby = GridAdapterBaby(this, babies)
             gridView.adapter = gridAdapterBaby
@@ -133,7 +136,18 @@ class GridActivity : AppCompatActivity() {
         R.id.action_profile -> {
 
             val intent = Intent(this, UserProfileActivity::class.java)
-            this.startActivity(intent)
+
+            if (intentDaddy != null) { // Checks if in this Activity the user registered as a SugarDaddy
+
+                intent.putExtra("sugardaddy", intentDaddy)
+
+            } else { // Checks if in this Activity the user registered as a SugarBaby
+
+                intent.putExtra("sugarbaby", intentBaby)
+
+            }
+
+            startActivity(intent)
             true
 
         }

@@ -19,13 +19,24 @@ class SugarDaddy : Person(), Serializable {
     var kind: KindDaddy = KindDaddy.GOTHIC // A predefined role for the SugarBaby. It can be changed later while registering.
 
     /**
-     * Gets or sets how much money can handle the a SugarDaddy user.
+     * Gets how much money can handle the a SugarDaddy user.
      * @return money How much money a SugarDaddy user can handle.
      * @since November 2019
      */
     fun getMoney(): Int {
 
         return money
+
+    }
+
+    /**
+     * Sets how much money can handle the a SugarDaddy user.
+     * @param money How much money a SugarDaddy user can handle.
+     * @since December 2019
+     */
+    fun setMoney(money: Int) {
+
+        this.money = money
 
     }
 

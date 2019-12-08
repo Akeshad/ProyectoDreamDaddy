@@ -52,12 +52,49 @@
                 app:layout_constraintTop_toBottomOf="@+id/textViewUserProfile" />
 
             <EditText
-                android:id="@+id/editUserProfileOptionMenu"
+                android:id="@+id/editUserProfileOptionMenuTelephone"
                 style="@style/editTexts"
                 android:layout_marginTop="50dp"
-                android:focusable="false"
+                android:focusable="auto"
                 android:hint="@string/waiting_input"
                 android:inputType="phone"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_options" />
+
+            <EditText
+                android:id="@+id/editUserProfileOptionMenuNickname"
+                style="@style/editTexts"
+                android:layout_marginTop="50dp"
+                android:focusable="auto"
+                android:hint="@string/waiting_input"
+                android:inputType="text"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_options" />
+
+            <EditText
+                android:id="@+id/editUserProfileOptionMenuMoney"
+                style="@style/editTexts"
+                android:layout_marginTop="50dp"
+                android:focusable="auto"
+                android:hint="@string/waiting_input"
+                android:inputType="number"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_options" />
+
+            <EditText
+                android:id="@+id/editUserProfileOptionMenuPassword"
+                style="@style/editTexts"
+                android:layout_marginTop="50dp"
+                android:focusable="auto"
+                android:hint="@string/waiting_input"
+                android:inputType="textPassword"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/user_options" />
@@ -65,14 +102,14 @@
             <Button
                 android:id="@+id/buttonUserProfileOptionMenu"
                 style="@style/buttons"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="140dp"
                 android:layout_marginBottom="50dp"
                 android:onClick="saveChanges"
                 android:text="@string/saveChanges"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editUserProfileOptionMenu" />
+                app:layout_constraintTop_toBottomOf="@+id/user_options" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
