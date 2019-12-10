@@ -199,6 +199,7 @@ class GridActivity : AppCompatActivity() {
             daddy6.setMoney(82312)
             daddy6.telephone = "675493012"
             daddies.add(daddy6)
+
             /*
             myFirebase.child("dreamdaddy").addValueEventListener(object : ValueEventListener {
 
@@ -242,6 +243,7 @@ class GridActivity : AppCompatActivity() {
 
             })
             */
+
             gridAdapterDaddy = GridAdapterDaddy(context, daddies)
             gridView.adapter = gridAdapterDaddy
 
@@ -266,46 +268,46 @@ class GridActivity : AppCompatActivity() {
 
     /**
      * Creates the Options Menu's Items in this Activity and allows to continue the App Cycle by going to other activities.
-     * These activities are UserSettingActivity and Settings.
+     * These activities are UserProfileActivity and UserSettingActivity.
      * @param item The Menu Item to be displayed.
      * @since November 2019
      */
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
 
-        R.id.action_profile -> {
+        R.id.action_profile -> { // When the user clicks on Perfil
 
-            val intent = Intent(this, UserProfileActivity::class.java)
+            val intentActivity = Intent(context, UserProfileActivity::class.java)
 
-            if (intentDaddy != null) { // Checks if in this Activity the user registered as a SugarDaddy
+            if (intent.hasExtra("sugardaddy")) { // Checks if in this Activity the user registered as a SugarDaddy
 
-                intent.putExtra("sugardaddy", intentDaddy)
+                intentActivity.putExtra("sugardaddy", intentDaddy)
 
             } else { // Checks if in this Activity the user registered as a SugarBaby
 
-                intent.putExtra("sugarbaby", intentBaby)
+                intentActivity.putExtra("sugarbaby", intentBaby)
 
             }
 
-            startActivity(intent)
+            startActivity(intentActivity)
             true
 
         }
 
-        R.id.action_setting -> {
+        R.id.action_setting -> { // When the user clicks on Ajustes
 
-            val intent = Intent(this, UserSettingActivity::class.java)
+            val intentActivity = Intent(context, UserSettingActivity::class.java)
 
-            if (intentDaddy != null) { // Checks if in this Activity the user registered as a SugarDaddy
+            if (intent.hasExtra("sugardaddy")) { // Checks if in this Activity the user registered as a SugarDaddy
 
-                intent.putExtra("sugardaddy", intentDaddy)
+                intentActivity.putExtra("sugardaddy", intentDaddy)
 
             } else { // Checks if in this Activity the user registered as a SugarBaby
 
-                intent.putExtra("sugarbaby", intentBaby)
+                intentActivity.putExtra("sugarbaby", intentBaby)
 
             }
 
-            startActivity(intent)
+            startActivity(intentActivity)
             true
 
         }

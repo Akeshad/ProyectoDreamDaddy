@@ -32,6 +32,8 @@ class SelectedProfileActivity : AppCompatActivity() {
     private val callPermission: Array<String> = arrayOf(CALL_PHONE) // Array of String for the Call Phone's permission
     private val callPermissionCode = 100 // Random number given to said permission
     private val context = this // This Activity's context
+    private val babyCaresMoney = "Le importa el dinero" // SugarBaby's String for caring about money
+    private val babyCaresNotMoney = "No le importa el dinero" // SugarBaby's String for NOT caring about money
 
     /**
      * Mandatory function invoked when creating the SelectedProfileActivity.
@@ -54,7 +56,17 @@ class SelectedProfileActivity : AppCompatActivity() {
 
             baby = intent.getSerializableExtra("sugarbaby") as SugarBaby
             avatar.setImageResource(baby.linkImage)
-            textInfo.text = baby.nickname + "\n" + DateFormat.getDateInstance().format(baby.birthDate.time) + "\n" + baby.caresAboutMoney()
+
+            if (baby.caresAboutMoney()) { // Checks if the SugarBaby cares about money
+
+                textInfo.text = baby.nickname + "\n" + DateFormat.getDateInstance().format(baby.birthDate.time) + "\n" + babyCaresMoney
+
+            } else { // Checks if the SugarBaby doesn't care about money
+
+                textInfo.text = baby.nickname + "\n" + DateFormat.getDateInstance().format(baby.birthDate.time) + "\n" + babyCaresNotMoney
+
+            }
+
             telephone = baby.telephone
 
         }

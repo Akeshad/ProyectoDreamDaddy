@@ -42,7 +42,7 @@ class UserProfileActivity : AppCompatActivity() {
             avatar.setImageResource(daddy.linkImage)
             textNickname.text = daddy.nickname
             textBirthDate.text =  DateFormat.getDateInstance().format(daddy.birthDate.time)
-            textMoney.text = daddy.getMoney().toString()
+            textMoney.text = daddy.getMoney().toString() + " €"
             textEmail.text = daddy.email
             textKind.text = daddy.kind.name
 

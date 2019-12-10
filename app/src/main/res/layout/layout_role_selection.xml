@@ -37,6 +37,7 @@
                 style="@style/textSubHeaders"
                 android:layout_marginTop="50dp"
                 android:text="@string/labelSugarDaddyRole"
+                android:textColor="@color/text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
@@ -50,13 +51,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelRoleSelectionSugarDaddy"
-                app:srcCompat="@drawable/sugardaddy" />
+                app:srcCompat="@drawable/daddy_intellectual" />
 
             <TextView
                 android:id="@+id/labelRoleSelectionSugarBaby"
                 style="@style/textSubHeaders"
                 android:layout_marginTop="25dp"
                 android:text="@string/labelSugarBabyRole"
+                android:textColor="@color/text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +74,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelRoleSelectionSugarBaby"
-                app:srcCompat="@drawable/sugarbaby" />
+                app:srcCompat="@drawable/baby_otter" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
