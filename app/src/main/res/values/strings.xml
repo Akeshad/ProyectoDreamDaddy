@@ -30,6 +30,7 @@
     <string name="logoContentDescription">El logo de la aplicación DreamDaddy</string>
     <string name="sugarDaddyContentDescription">Sugar Daddy</string>
     <string name="sugarBabyContentDescription">Sugar Baby</string>
+    <string name="profileDescription">Tu avatar</string>
 
     <!-- SUGAR DADDIES AND SUGAR BABIES -->
     <string name="imagePersonContentDescription">Avatar del perfil seleccionado</string>

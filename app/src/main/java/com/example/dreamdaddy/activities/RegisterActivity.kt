@@ -25,8 +25,8 @@ import kotlin.collections.HashMap
 class RegisterActivity : AppCompatActivity() {
 
     private var calendarDate: Calendar = Calendar.getInstance() // Used for choosing a date from the Calendar. Related to the user's birth date.
-    private val context = this
-    private val auth = FirebaseAuth.getInstance()
+    private val context = this // This Activity's Context
+    private val auth = FirebaseAuth.getInstance() // Cloud Firestore's Authentication
 
     /**
      * Mandatory function invoked when creating the RegisterActivity.

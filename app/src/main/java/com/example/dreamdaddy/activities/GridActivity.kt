@@ -51,10 +51,83 @@ class GridActivity : AppCompatActivity() {
 
             intentDaddy = intent.getSerializableExtra("sugardaddy") as SugarDaddy
 
-            val daddies = ArrayList<SugarDaddy>()
-            val daddy = intent.getSerializableExtra("sugardaddy") as SugarDaddy // TODO ESTA SOBRA Y SARA ESTA CUCU
-            daddies.add(daddy) // TODO ESTA SOBRA Y SARA ESTA CUCU
+            val babies = ArrayList<SugarBaby>()
 
+            val baby1 = SugarBaby() // First SugarBaby sample
+            baby1.nickname = "Abel"
+            baby1.kind = KindBaby.SPOILED
+            baby1.linkImage = R.drawable.baby_spoiled
+            val sdf1 = SimpleDateFormat("MM-dd-yyyy")
+            val date1: Date? = sdf1.parse("3-24-1993")
+            val cal1 = sdf1.calendar
+            baby1.birthDate = cal1
+            baby1.telephone = "123456789"
+            babies.add(baby1)
+
+            val baby2 = SugarBaby() // Second SugarBaby sample
+            baby2.nickname = "Álvaro"
+            baby2.kind = KindBaby.FANCY
+            baby2.linkImage = R.drawable.baby_fancy
+            val sdf2 = SimpleDateFormat("MM-dd-yyyy")
+            val date2: Date? = sdf2.parse("11-10-1993")
+            val cal2 = sdf2.calendar
+            baby2.birthDate = cal2
+            baby2.telephone = "987654321"
+            babies.add(baby2)
+
+            val baby3 = SugarBaby() // Third SugarBaby sample
+            baby3.nickname = "Migui"
+            baby3.kind = KindBaby.ROMANTIC
+            baby3.linkImage = R.drawable.baby_romantic
+            val sdf3 = SimpleDateFormat("MM-dd-yyyy")
+            val date3: Date? = sdf3.parse("2-14-1994")
+            val cal3 = sdf3.calendar
+            baby3.birthDate = cal3
+            baby3.telephone = "987123456"
+            babies.add(baby3)
+
+            val baby4 = SugarBaby() // Fourth SugarBaby sample
+            baby4.nickname = "Paquiqui"
+            baby4.kind = KindBaby.EMO
+            baby4.linkImage = R.drawable.baby_emo
+            val sdf4 = SimpleDateFormat("MM-dd-yyyy")
+            val date4: Date? = sdf4.parse("6-21-1991")
+            val cal4 = sdf4.calendar
+            baby4.birthDate = cal4
+            baby4.telephone = "918273645"
+            babies.add(baby4)
+
+            val baby5 = SugarBaby() // Fifth SugarBaby sample
+            baby5.nickname = "Arthas"
+            baby5.kind = KindBaby.SPOILED
+            baby5.linkImage = R.drawable.baby_spoiled
+            val sdf5 = SimpleDateFormat("MM-dd-yyyy")
+            val date5: Date? = sdf5.parse("12-30-1990")
+            val cal5 = sdf5.calendar
+            baby5.birthDate = cal5
+            baby5.telephone = "123498765"
+            babies.add(baby5)
+
+            val baby6 = SugarBaby() // Sixth SugarBaby sample
+            baby6.nickname = "Jesse"
+            baby6.kind = KindBaby.OTTER
+            baby6.linkImage = R.drawable.baby_otter
+            val sdf6 = SimpleDateFormat("MM-dd-yyyy")
+            val date6: Date? = sdf6.parse("11-13-1994")
+            val cal6 = sdf6.calendar
+            baby6.birthDate = cal6
+            baby6.telephone = "555555666"
+            babies.add(baby6)
+
+            gridAdapterBaby = GridAdapterBaby(this, babies)
+            gridView.adapter = gridAdapterBaby
+
+
+        } else { // Checks if the intent contents a SugarBaby
+
+            intentBaby = intent.getSerializableExtra("sugarbaby") as SugarBaby
+
+            val daddies = ArrayList<SugarDaddy>()
             val daddy1 = SugarDaddy() // First SugarDaddy sample
             daddy1.nickname = "Antonio"
             daddy1.kind = KindDaddy.BADDY
@@ -172,82 +245,6 @@ class GridActivity : AppCompatActivity() {
             gridAdapterDaddy = GridAdapterDaddy(context, daddies)
             gridView.adapter = gridAdapterDaddy
 
-
-        } else { // Checks if the intent contents a SugarBaby
-
-            intentBaby = intent.getSerializableExtra("sugarbaby") as SugarBaby
-
-            val babies = ArrayList<SugarBaby>()
-
-            val baby1 = SugarBaby() // First SugarBaby sample
-            baby1.nickname = "Abel"
-            baby1.kind = KindBaby.SPOILED
-            baby1.linkImage = R.drawable.baby_spoiled
-            val sdf1 = SimpleDateFormat("MM-dd-yyyy")
-            val date1: Date? = sdf1.parse("3-24-1993")
-            val cal1 = sdf1.calendar
-            baby1.birthDate = cal1
-            baby1.telephone = "123456789"
-            babies.add(baby1)
-
-            val baby2 = SugarBaby() // Second SugarBaby sample
-            baby2.nickname = "Álvaro"
-            baby2.kind = KindBaby.FANCY
-            baby2.linkImage = R.drawable.baby_fancy
-            val sdf2 = SimpleDateFormat("MM-dd-yyyy")
-            val date2: Date? = sdf2.parse("11-10-1993")
-            val cal2 = sdf2.calendar
-            baby2.birthDate = cal2
-            baby2.telephone = "987654321"
-            babies.add(baby2)
-
-            val baby3 = SugarBaby() // Third SugarBaby sample
-            baby3.nickname = "Migui"
-            baby3.kind = KindBaby.ROMANTIC
-            baby3.linkImage = R.drawable.baby_romantic
-            val sdf3 = SimpleDateFormat("MM-dd-yyyy")
-            val date3: Date? = sdf3.parse("2-14-1994")
-            val cal3 = sdf3.calendar
-            baby3.birthDate = cal3
-            baby3.telephone = "987123456"
-            babies.add(baby3)
-
-            val baby4 = SugarBaby() // Fourth SugarBaby sample
-            baby4.nickname = "Paquiqui"
-            baby4.kind = KindBaby.EMO
-            baby4.linkImage = R.drawable.baby_emo
-            val sdf4 = SimpleDateFormat("MM-dd-yyyy")
-            val date4: Date? = sdf4.parse("6-21-1991")
-            val cal4 = sdf4.calendar
-            baby4.birthDate = cal4
-            baby4.telephone = "918273645"
-            babies.add(baby4)
-
-            val baby5 = SugarBaby() // Fifth SugarBaby sample
-            baby5.nickname = "Arthas"
-            baby5.kind = KindBaby.SPOILED
-            baby5.linkImage = R.drawable.baby_spoiled
-            val sdf5 = SimpleDateFormat("MM-dd-yyyy")
-            val date5: Date? = sdf5.parse("12-30-1990")
-            val cal5 = sdf5.calendar
-            baby5.birthDate = cal5
-            baby5.telephone = "123498765"
-            babies.add(baby5)
-
-            val baby6 = SugarBaby() // Sixth SugarBaby sample
-            baby6.nickname = "Jesse"
-            baby6.kind = KindBaby.OTTER
-            baby6.linkImage = R.drawable.baby_otter
-            val sdf6 = SimpleDateFormat("MM-dd-yyyy")
-            val date6: Date? = sdf6.parse("11-13-1994")
-            val cal6 = sdf6.calendar
-            baby6.birthDate = cal6
-            baby6.telephone = "555555666"
-            babies.add(baby6)
-
-            gridAdapterBaby = GridAdapterBaby(this, babies)
-            gridView.adapter = gridAdapterBaby
-
         }
 
     }
@@ -269,7 +266,7 @@ class GridActivity : AppCompatActivity() {
 
     /**
      * Creates the Options Menu's Items in this Activity and allows to continue the App Cycle by going to other activities.
-     * These activities are UserProfileActivity and Settings.
+     * These activities are UserSettingActivity and Settings.
      * @param item The Menu Item to be displayed.
      * @since November 2019
      */
@@ -296,6 +293,19 @@ class GridActivity : AppCompatActivity() {
 
         R.id.action_setting -> {
 
+            val intent = Intent(this, UserSettingActivity::class.java)
+
+            if (intentDaddy != null) { // Checks if in this Activity the user registered as a SugarDaddy
+
+                intent.putExtra("sugardaddy", intentDaddy)
+
+            } else { // Checks if in this Activity the user registered as a SugarBaby
+
+                intent.putExtra("sugarbaby", intentBaby)
+
+            }
+
+            startActivity(intent)
             true
 
         }
