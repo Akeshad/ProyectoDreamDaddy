@@ -1,0 +1,3 @@
+Miguel, te recordamos que en el historial de commits saldrá probablemente más cosas con el nombre de Álvaro porque Sara ha tenido que trabajar desde su PC porque su portátil no tira de ninguna manera Android Studio.
+
+Por favor, en los títulos de los commits hemos puesto quién ha hecho también cada cosa, compruébalo si puedes. ¡Gracias!
