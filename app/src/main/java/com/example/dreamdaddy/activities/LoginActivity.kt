@@ -7,6 +7,8 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import com.example.dreamdaddy.R
+import com.example.dreamdaddy.classes.SugarBaby
+import com.example.dreamdaddy.classes.SugarDaddy
 import com.google.firebase.auth.FirebaseAuth
 
 /**
@@ -46,9 +48,23 @@ class LoginActivity : AppCompatActivity() {
 
             if (task.isSuccessful) {
 
-                val user = authentication.getCurrentUser()
+                val user = authentication.getCurrentUser()?.uid
 
                 val intent = Intent(this, GridActivity::class.java)
+                intent.putExtra("user", user)
+
+                if ((System.currentTimeMillis() / 1000) % 2 == 0L) { // Checks if the current moment of time is odd or even
+
+                    val daddy = SugarDaddy()
+                    intent.putExtra("sugardaddy", daddy)
+
+                } else {
+
+                    val baby = SugarBaby()
+                    intent.putExtra("sugarbaby", baby)
+
+                }
+
                 this.startActivity(intent)
 
             } else {

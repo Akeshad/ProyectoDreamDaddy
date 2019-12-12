@@ -121,7 +121,7 @@ class RegisterActivity : AppCompatActivity() {
                 mapBaby.put("linkImage", sugarBaby.linkImage)
 
                 // Inserts the SugarDaddy into Cloud Firestore
-                myFirebase.collection("dreamdaddy").add(mapBaby).addOnSuccessListener { Toast.makeText(this, resources.getString(R.string.insertSuccess), Toast.LENGTH_LONG).show() }
+                myFirebase.collection("dreambaby").add(mapBaby).addOnSuccessListener { Toast.makeText(this, resources.getString(R.string.insertSuccess), Toast.LENGTH_LONG).show() }
                         .addOnFailureListener { Toast.makeText(this, resources.getString(R.string.insertFailure), Toast.LENGTH_LONG).show() }
 
                 // Creates credentials for the user in Cloud Firestore

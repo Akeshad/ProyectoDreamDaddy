@@ -12,6 +12,7 @@ import com.example.dreamdaddy.classes.KindBaby
 import com.example.dreamdaddy.classes.KindDaddy
 import com.example.dreamdaddy.classes.SugarBaby
 import com.example.dreamdaddy.classes.SugarDaddy
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -47,7 +48,8 @@ class GridActivity : AppCompatActivity() {
 
         gridView = findViewById(R.id.gridLayoutGridProfiles)
 
-        if (intent.hasExtra("sugardaddy")) { // Checks if the intent contents a SugarDaddy
+        if (intent.hasExtra("sugardaddy") && intent.getStringExtra("user") != null) { // Checks if the intent contents a SugarDaddy
+
 
             intentDaddy = intent.getSerializableExtra("sugardaddy") as SugarDaddy
 
@@ -125,7 +127,9 @@ class GridActivity : AppCompatActivity() {
 
         } else { // Checks if the intent contents a SugarBaby
 
-            intentBaby = intent.getSerializableExtra("sugarbaby") as SugarBaby
+            if (intent.getSerializableExtra("sugarbaby") != null) {
+                intentBaby = intent.getSerializableExtra("sugarbaby") as SugarBaby
+            }
 
             val daddies = ArrayList<SugarDaddy>()
             val daddy1 = SugarDaddy() // First SugarDaddy sample
