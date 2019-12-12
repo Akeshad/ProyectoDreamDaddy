@@ -1,6 +1,5 @@
 package com.example.dreamdaddy.activities
 
-import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
@@ -11,10 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.dreamdaddy.R
 import com.example.dreamdaddy.classes.SugarBaby
 import com.example.dreamdaddy.classes.SugarDaddy
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.OnFailureListener
-import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.layout_register.*
@@ -30,6 +25,8 @@ import kotlin.collections.HashMap
 class RegisterActivity : AppCompatActivity() {
 
     private var calendarDate: Calendar = Calendar.getInstance() // Used for choosing a date from the Calendar. Related to the user's birth date.
+    private val context = this // This Activity's Context
+    private val auth = FirebaseAuth.getInstance() // Cloud Firestore's Authentication
 
     /**
      * Mandatory function invoked when creating the RegisterActivity.
@@ -46,8 +43,7 @@ class RegisterActivity : AppCompatActivity() {
         val month = calendar.get(Calendar.MONTH)
         val day = calendar.get(Calendar.DAY_OF_MONTH)
 
-        // Lambda expression for setting the birth date via event.
-        editTextBirthDateRegister.setOnClickListener {
+        editTextBirthDateRegister.setOnClickListener { // Lambda expression for setting the birth date via event.
 
             val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, mYear, mMonth, mDayOfMonth ->
 
@@ -76,16 +72,12 @@ class RegisterActivity : AppCompatActivity() {
 
             val sugarDaddy: SugarDaddy? = intent.getSerializableExtra("sugardaddy") as SugarDaddy
 
-            if (sugarDaddy != null) {
+            if (sugarDaddy != null) { // Checks if the registering user is a SugarDaddy
 
                 sugarDaddy.nickname = findViewById<EditText>(R.id.editTextUsernameRegister).text.toString()
                 sugarDaddy.email = findViewById<EditText>(R.id.editTextEmailRegister).text.toString()
                 sugarDaddy.password = findViewById<EditText>(R.id.editTextPasswordRegister).text.toString()
                 sugarDaddy.birthDate = calendarDate
-
-
-
-                //-------------------------------------------DATABASE Inserts----------------------------
 
                 val mapDaddy = HashMap<String, Any>()
                 mapDaddy.put("birthDate", DateFormat.getDateInstance().format(sugarDaddy.birthDate.time).toString())
@@ -94,89 +86,56 @@ class RegisterActivity : AppCompatActivity() {
                 mapDaddy.put("nickname", sugarDaddy.nickname)
                 mapDaddy.put("password", sugarDaddy.password)
                 mapDaddy.put("linkImage", sugarDaddy.linkImage)
-                mapDaddy.put("telephone", 0) // TODO ESTE SE TENDRA QUE BORRAR, ESTA DE PRUEBAS
 
+                // Inserts the SugarDaddy into Cloud Firestore
                 myFirebase.collection("dreamdaddy").add(mapDaddy).addOnSuccessListener { Toast.makeText(this, resources.getString(R.string.insertSuccess), Toast.LENGTH_LONG).show() }
                         .addOnFailureListener { Toast.makeText(this, resources.getString(R.string.insertFailure), Toast.LENGTH_LONG).show() }
 
-                //-------------------------------------------DATABASE Register User----------------------------
+                // Creates credentials for the user in Cloud Firestore
+                auth.createUserWithEmailAndPassword(sugarDaddy.email, sugarDaddy.password).addOnCompleteListener {
+                    if (it.isSuccessful) return@addOnCompleteListener }.addOnFailureListener { Toast.makeText(context, resources.getString(R.string.credentialsFailure), Toast.LENGTH_LONG).show() }
 
-                val estaActividad = this
+            }
 
-                val auth = FirebaseAuth.getInstance()
-                //Al usarla dentro de task, la variable t ha de ser declarada final
-                val t = auth.createUserWithEmailAndPassword(sugarDaddy.email, sugarDaddy.password)
-                t.addOnCompleteListener(this, object : OnCompleteListener<AuthResult> {
-                    override fun onComplete(p0: Task<AuthResult>) {
-                        if (t.isSuccessful) {
-                            Toast.makeText(estaActividad, "Completado con éxito", Toast.LENGTH_LONG).show()
-                        }else{
-                            Toast.makeText(estaActividad, "Todo mal", Toast.LENGTH_LONG).show()
-                        }
-                    }
-                })
+            val intent = Intent(this, GridActivity::class.java)
+            intent.putExtra("sugardaddy", sugarDaddy)
+            startActivity(intent)
 
-                //---------------INTENT--------------------------------
+        } else { // If the user chose to be a SugarBaby
+
+            val sugarBaby: SugarBaby? = intent.getSerializableExtra("sugarbaby") as SugarBaby
+
+            if (sugarBaby != null) {
+
+                sugarBaby.nickname = findViewById<EditText>(R.id.editTextUsernameRegister).text.toString()
+                sugarBaby.email = findViewById<EditText>(R.id.editTextEmailRegister).text.toString()
+                sugarBaby.password = findViewById<EditText>(R.id.editTextPasswordRegister).text.toString()
+                sugarBaby.birthDate = calendarDate
+
+                val mapBaby = HashMap<String, Any>()
+                mapBaby.put("birthDate", DateFormat.getDateInstance().format(sugarBaby.birthDate.time).toString())
+                mapBaby.put("email", sugarBaby.email)
+                mapBaby.put("kind", sugarBaby.kind)
+                mapBaby.put("nickname", sugarBaby.nickname)
+                mapBaby.put("password", sugarBaby.password)
+                mapBaby.put("linkImage", sugarBaby.linkImage)
+
+                // Inserts the SugarDaddy into Cloud Firestore
+                myFirebase.collection("dreamdaddy").add(mapBaby).addOnSuccessListener { Toast.makeText(this, resources.getString(R.string.insertSuccess), Toast.LENGTH_LONG).show() }
+                        .addOnFailureListener { Toast.makeText(this, resources.getString(R.string.insertFailure), Toast.LENGTH_LONG).show() }
+
+                // Creates credentials for the user in Cloud Firestore
+                auth.createUserWithEmailAndPassword(sugarBaby.email, sugarBaby.password).addOnCompleteListener {
+                    if (it.isSuccessful) return@addOnCompleteListener }.addOnFailureListener { Toast.makeText(context, resources.getString(R.string.credentialsFailure), Toast.LENGTH_LONG).show() }
 
                 val intent = Intent(this, GridActivity::class.java)
-                intent.putExtra("sugardaddy", sugarDaddy)
+                intent.putExtra("sugarbaby", sugarBaby)
                 startActivity(intent)
-
-
-
-            } else { // If the user chose to be a SugarBaby
-
-                val sugarBaby: SugarBaby? = intent.getSerializableExtra("sugarbaby") as SugarBaby
-
-                if (sugarBaby != null) {
-
-                    sugarBaby.nickname = findViewById<EditText>(R.id.editTextUsernameRegister).text.toString()
-                    sugarBaby.email = findViewById<EditText>(R.id.editTextEmailRegister).text.toString()
-                    sugarBaby.password = findViewById<EditText>(R.id.editTextPasswordRegister).text.toString()
-                    sugarBaby.birthDate = calendarDate
-
-
-
-                    //-------------------------------------------DATABASE-------------------------------
-
-                    val mapBaby = HashMap<String, Any>()
-                    mapBaby.put("birthDate", DateFormat.getDateInstance().format(sugarBaby.birthDate.time).toString())
-                    mapBaby.put("email", sugarBaby.email)
-                    mapBaby.put("kind", sugarBaby.kind)
-                    mapBaby.put("nickname", sugarBaby.nickname)
-                    mapBaby.put("password", sugarBaby.password)
-                    mapBaby.put("linkImage", sugarBaby.linkImage)
-
-                    myFirebase.collection("dreamdaddy").add(mapBaby).addOnSuccessListener { Toast.makeText(this, resources.getString(R.string.insertSuccess), Toast.LENGTH_LONG).show() }
-                            .addOnFailureListener { Toast.makeText(this, resources.getString(R.string.insertFailure), Toast.LENGTH_LONG).show() }
-
-                    //-------------------------------------------DATABASE Register User----------------------------
-
-                    val estaActividad = this
-
-                    val auth = FirebaseAuth.getInstance()
-                    //Al usarla dentro de task, la variable t ha de ser declarada final
-                    val t = auth.createUserWithEmailAndPassword(sugarBaby.email, sugarBaby.password)
-                    t.addOnCompleteListener(this, object : OnCompleteListener<AuthResult> {
-                        override fun onComplete(p0: Task<AuthResult>) {
-                            if (t.isSuccessful) {
-                                Toast.makeText(estaActividad, "Completado con éxito", Toast.LENGTH_LONG).show()
-                            }else{
-                                Toast.makeText(estaActividad, "Todo mal", Toast.LENGTH_LONG).show()
-                            }
-                        }
-                    })
-
-                    //-------------------INTENT--------------------------------
-
-                    val intent = Intent(this, GridActivity::class.java)
-                    intent.putExtra("sugarbaby", sugarBaby)
-                    startActivity(intent)
-                }
 
             }
 
         }
 
     }
+
 }

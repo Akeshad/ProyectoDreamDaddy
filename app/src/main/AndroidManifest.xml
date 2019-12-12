@@ -4,7 +4,7 @@
     package="com.example.dreamdaddy">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -25,11 +25,13 @@
 
         </activity>
         <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.RegisterActivity"
+        <activity
+            android:name=".activities.RegisterActivity"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".activities.RoleSelectionActivity" />
-        <activity android:name=".activities.RoleSugarDaddyActivity" />
         <activity android:name=".activities.UserProfileActivity" />
+        <activity android:name=".activities.RoleSugarDaddyActivity" />
+        <activity android:name=".activities.UserSettingActivity" />
         <activity android:name=".activities.RoleSugarBabyActivity" />
         <activity
             android:name=".activities.GridActivity"

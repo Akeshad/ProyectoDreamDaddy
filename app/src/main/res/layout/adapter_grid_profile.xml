@@ -8,9 +8,19 @@
 
     <ImageButton
         android:id="@+id/imageButtonGrid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/background"
         android:contentDescription="@string/imagePersonContentDescription"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewProfileGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/text"
+        android:textSize="20sp"/>
 
 </LinearLayout>

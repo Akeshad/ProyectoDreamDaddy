@@ -24,12 +24,8 @@
 
             <TextView
                 android:id="@+id/labelLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                style="@style/textHeaders"
                 android:text="@string/label_login"
-                android:textColor="@color/white"
-                android:textSize="40sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
                 android:hint="@string/email"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 app:layout_constraintBottom_toTopOf="@+id/editTextPasswordLogin"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

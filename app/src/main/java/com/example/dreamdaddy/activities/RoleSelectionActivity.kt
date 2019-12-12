@@ -50,4 +50,5 @@ class RoleSelectionActivity : AppCompatActivity() {
         this.startActivity(intent)
 
     }
+
 }
